@@ -1,0 +1,11 @@
+<section class="collection-list">
+  <div class="collection-item">
+    {%- for item in site[collection] -%}
+      <p>{{ item.title }} {{ item.blurb }}</p>
+      <a href="{{ site.url }}/{{ collection }}/{{ item.url }}">
+        <p>{{ item.blurb }}</p>
+      </a>
+    {% endfor %}
+  </div>
+
+</section>

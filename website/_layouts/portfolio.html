@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="wrapper">
+  <article class="post">
+
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title | escape }}</h1>
+    </header>
+
+    {%- assign collection = "portfolio" -%}
+    {%- include collection_list.html collection=collection -%}
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+  </article>
+</div>
