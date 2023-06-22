@@ -1,0 +1,186 @@
+<div id="matter-container" class="container" style="width:100%; height: 600px">
+</div>
+
+<script>
+  
+  const matterContainer = document.querySelector("#matter-container");
+  matterContainer.width = "100%";
+  matterContainer.height = "600px";
+
+  // Set up Matter.js
+  const Engine = Matter.Engine;
+  const Render = Matter.Render;
+  const World = Matter.World;
+  const Bodies = Matter.Bodies;
+  const Composite = Matter.Composite;
+  const Events = Matter.Events;
+  const engine = Engine.create();
+  
+
+  // Create an array of quotes
+  const quotes = [
+    "Be the change you want to see in the world.",
+    "An eye for an eye leaves the whole world blind.",
+    "In three words I.",
+    "To be yourself in a world ",
+    "I have not failed.",
+    "27.5 has wayyyyyy less gyro forces",
+    "But the inertia bro",
+    "Bigger while clearly means more inertia",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+  ];
+
+  // Create an array to store the falling quotes
+  const quoteBodies = [];
+
+  // Create the ground
+  const ground = Bodies.rectangle(
+    matterContainer.clientWidth / 2,
+    matterContainer.clientHeight + 11, 20000, 20, { isStatic: true });
+  // Create the left wall
+  const leftwall = Bodies.rectangle(
+    -11, matterContainer.clientHeight / 2,
+    20, matterContainer.clientHeight, { isStatic: true });
+  // Create the right wall
+  const rightwall = Bodies.rectangle(
+    matterContainer.clientWidth + 11, matterContainer.clientHeight / 2,
+    20, matterContainer.clientHeight, { isStatic: true });
+
+  // Add the ground and falling quotes to the world
+  World.add(engine.world, [ground, leftwall, rightwall, ...quoteBodies]);
+
+  // Set up the renderer
+  const render = Render.create({
+    element: matterContainer,
+    engine: engine,
+    options: {
+      width: matterContainer.clientWidth,
+      height: matterContainer.clientHeight,
+      wireframes: false,
+      background: "transparent"
+    }
+  });
+
+  // Set up the canvas
+  // const canvas = render.canvas
+  const ctx = render.canvas.getContext("2d");
+
+  // Start the engine and renderer
+  Matter.Runner.run(engine);
+  Render.run(render);
+
+  // Create a function to add a new falling quote to the world
+  function addQuote(i) {
+    // Choose a random quote from the array
+    const quote = quotes[i];
+    
+    // Create a new falling quote body
+    const body = Bodies.rectangle(
+        Math.random() * matterContainer.clientWidth, 0,
+        quote.length * 9 + 10, 40, {
+      friction: 0.9,
+      restitution: 0.4,
+      density: 0.01,
+      label: "quote",
+      render: {
+        fillStyle: "lightgray",
+        strokeStyle: "#000000",
+        lineWidth: 0,
+      }
+    });
+    
+    // Add the body to the quoteBodies array and to the world
+    quoteBodies.push(body);
+    World.add(engine.world, body);
+    
+  }
+
+  // Call the addQuote function on interval
+  var q_idx = 0;
+  var interval = setInterval(function () {
+    if(q_idx >= quotes.length - 1) {
+      clearInterval(interval);
+    }
+    addQuote(q_idx);
+    q_idx += 1;
+  }, 1000 / 4 );
+  //
+
+  // Add an event listener for the afterRender event
+  Events.on(render, "afterRender", function() {
+    // Loop through all the quote bodies
+    for (let i = 0; i < quoteBodies.length; i++) {
+      const body = quoteBodies[i];
+      
+      // Render the quote text on the canvas at the current body position
+      ctx.font = "16px Verdana";
+      ctx.fillStyle = "black";
+      ctx.translate(body.position.x , body.position.y)
+      ctx.rotate(body.angle);
+      ctx.textAlign = 'center';
+      ctx.fillText(quotes[i], 0, 0);
+      ctx.rotate(-body.angle);
+      ctx.translate(-body.position.x, -body.position.y)
+    }
+  });
+
+  // Create a function to clear the fallen quotes
+  function clearQuotes() {
+    // Remove all bodies with the label "quote"
+    const quotesToRemove = Composite.allBodies(engine.world).filter(body => body.label === "quote");
+    World.remove(engine.world, quotesToRemove);
+  }
+
+  function handleResize(matterContainer) {
+    render.canvas.width = matterContainer.clientWidth;
+    render.canvas.height = matterContainer.clientHeight;
+
+    Matter.Body.setPosition(
+      ground,
+      Matter.Vector.create(
+        matterContainer.clientWidth / 2,
+        matterContainer.clientHeight + 11
+    ));
+    Matter.Body.setPosition(
+      rightwall,
+      Matter.Vector.create(
+        matterContainer.clientWidth + 11,
+        matterContainer.clientHeight / 2
+    ));
+  }
+
+  window.addEventListener("resize", () => handleResize(matterContainer));
+
+  // Create a mouse instance and add it to the renderer
+  const mouse = Matter.Mouse.create(render.canvas);
+  const mouseConstraint = Matter.MouseConstraint.create(engine, {
+    mouse: mouse,
+    constraint: {
+      stiffness: 0.2,
+      render: {
+        visible: false
+      }
+    }
+  });
+
+  Matter.Composite.add(engine.world, mouseConstraint)
+
+  // Call the clearQuotes function every 5 seconds
+  // setInterval(clearQuotes, 20000);
+</script>
+
+

@@ -1,0 +1,51 @@
+
+<div class="row pb-4">
+  <div class="card p-0 border-0 rounded-4" style="min-height: 60px;">
+    <div class="row g-0 bg-light border border-3 rounded-4">
+      <div class="col-4 bg-secondary rounded-start-4">
+        {%- if item.thumbnail -%}
+          <img src="{{ item.thumbnail }}" class="img-fluid rounded-start-4" alt="test">
+        {% endif %}
+      </div>
+      <div class="col">
+        <div class="card-body">
+          <h2 class="card-title no-anchor">
+            <a class="stretched-link text-decoration-none text-black" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+          </h2>
+          {% if item.date %}
+            {%- assign date_format = "%b %-d, %Y" -%}
+            <p class="card-text">{{ item.date | date: date_format }}</p>
+          {% endif %}
+          {%- if item.blurb != blank -%}
+            <small>{{ item.blurb }}</small>
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="col-2 py-4 px-3">
+          {% if item.tags.size > 0 %}
+          <div class="row">
+            <div style="position:relative">
+              <p><span class="badge rounded-pill bg-secondary-subtle position-absolute top-0 start-50 translate-middle-x">Tags</span><br>
+                {% for tag in item.tags %}
+                <span class="badge rounded-pill bg-primary-subtle">{{ tag }}</span>
+                {% endfor %}
+              </p>
+            </div>
+          </div>
+          {% endif %}
+          {% if item.categories.size > 0 %}
+          <div class="row">
+            <div style="position:relative">
+              <p><span class="badge rounded-pill bg-secondary-subtle position-absolute top-0 start-50 translate-middle-x">Categories</span><br>
+                {% for cat in item.categories %}
+                <span class="badge rounded-pill bg-primary-subtle">{{ cat }}</span>
+                {% endfor %}
+              </p>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      
+    </div>
+  </div>
+</div>

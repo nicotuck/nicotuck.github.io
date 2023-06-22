@@ -2,20 +2,10 @@
 layout: page
 title: About
 permalink: /about/
-usemathjax: true
 ---
 
-Is this inline $$\rho = \frac{1}{2}$$ test test
+Hello there! My name is Nick, and I'm the creator and author behind this blog. 
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I've dedicated this personal blog to the realms of machines, coding, and fun on two wheels. As an engineer, I have gained extensive experience in various engineering disciplines, ranging from mechanical and system engineering to software development, and hope to share some of that here.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+I'm also using this platform as a learning tool - I am new to frontend development, so expect lots of questionable design choices, broken things, and rapid changes.

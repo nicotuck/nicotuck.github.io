@@ -1,0 +1,233 @@
+<div id="matter-container" class="container" style="width:100%; height: 600px">
+</div>
+<div id="matter-debug" class="container" style="width:100%; height: 600px">
+</div>
+
+<script>
+  const matterContainer = document.querySelector("#matter-container");
+  const matterDebug = document.querySelector("#matter-debug");
+  // matterContainer.width = "100%";
+  // matterContainer.height = 
+  // Set up Matter.js
+  const Engine = Matter.Engine;
+  const World = Matter.World;
+  const Bodies = Matter.Bodies;
+  const Composite = Matter.Composite;
+  const engine = Engine.create();
+
+  // Create an array of quotes
+  const quotes = [
+    "Be the change you want to see in the world.",
+    "An eye for an eye leaves the whole world blind.",
+    "In three words I.",
+    "To be yourself in a world ",
+    "I have not failed.",
+    "27.5 has wayyyyyy less gyro forces",
+    "But the inertia bro",
+    "Bigger while clearly means more inertia",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+    "test",
+  ];
+
+  const quoteBodies = [];
+
+  function dist(x1, y1, x2, y2) {
+    var x = Math.abs(x2-x1);
+    var y = Math.abs(y2 - y1);
+    return Math.sqrt((x*x) + (y*y))
+  }
+
+  function getRectBodyWidthHeight(body) {
+    var width = dist(
+      body.vertices[0].x, body.vertices[0].y,
+      body.vertices[1].x, body.vertices[1].y)
+
+    var height = dist(
+      body.vertices[0].x, body.vertices[0].y,
+      body.vertices[3].x, body.vertices[3].y)
+    return [width, height]
+  }
+  // Function to add quote
+  function addQuote(i) {
+    // Choose a quote from the array
+    const quote = quotes[i];
+
+    // Create a new falling quote body in Matter
+    const body = Bodies.rectangle(
+      Math.random() * matterContainer.clientWidth, -10,
+      quote.length * 9 + 8, 40, {
+          friction: 0.9,
+          restitution: 0.4,
+          density: 0.1,
+          label: "quote",
+      });
+
+    // Add the body to the quoteBodies array and to the world
+    quoteBodies.push(body);
+    World.add(engine.world, body);
+
+    return [body, quote];
+  }
+
+    // Create the ground
+  const ground = Bodies.rectangle(
+    matterContainer.clientWidth / 2,
+    matterContainer.clientHeight + 11, 20000, 20, { isStatic: true });
+
+  // Create the left wall
+  const leftwall = Bodies.rectangle(
+    -11, matterContainer.clientHeight / 2,
+    20, matterContainer.clientHeight, { isStatic: true });
+
+  // Create the right wall
+  const rightwall = Bodies.rectangle(
+    matterContainer.clientWidth + 11, matterContainer.clientHeight / 2,
+    20, matterContainer.clientHeight, { isStatic: true });
+
+  // Add the ground and walls to the world
+  World.add(engine.world, [ground, leftwall, rightwall]);
+
+  // Function to clear quotes
+  function clearQuotes() {
+    // Remove all bodies with the label "quote"
+    const quotesToRemove = Composite.allBodies(engine.world).filter(body => body.label === "quote");
+    World.remove(engine.world, quotesToRemove);
+    
+    return quotesToRemove;
+  }
+
+  // Handle resize
+  function handleResize() {
+    // Update ground and wall positions
+    Matter.Body.setPosition(
+      ground,
+      Matter.Vector.create(
+        matterContainer.clientWidth / 2,
+        matterContainer.clientHeight + 11
+    ));
+    Matter.Body.setPosition(
+      leftwall,
+      Matter.Vector.create(
+        -11,
+        matterContainer.clientHeight / 2
+    ));
+    Matter.Body.setPosition(
+      rightwall,
+      Matter.Vector.create(
+        matterContainer.clientWidth + 11,
+        matterContainer.clientHeight / 2
+    ));
+  }
+
+  window.addEventListener("resize", handleResize);
+
+  // Create a mouse instance
+  const mouse = Matter.Mouse.create(matterContainer);
+
+  // Create a mouse constraint instance
+  const mouseConstraint = Matter.MouseConstraint.create(engine, {
+    mouse: mouse,
+    constraint: {
+      stiffness: 0.2,
+      render: {
+        visible: true
+      }
+    }
+  });
+
+  // Add the mouse constraint to the world
+  World.add(engine.world, mouseConstraint);
+
+  // RENDERER
+  // Set up Two.js
+  const two = new Two(
+    { width: matterContainer.clientWidth,
+      height: matterContainer.clientHeight,
+      type: Two.Types.canvas, }).appendTo(matterContainer);
+
+  // Render quote bodies
+  function renderQuoteBody(body, quote) {
+    // Create a Two.js group and add a rectangle and text to it
+    const group = new Two.Group();
+    const rect = new Two.Rectangle(0, 0, ...getRectBodyWidthHeight(body));
+    rect.fill = "#d3d3d3";
+    rect.visible = true;
+    rect.noStroke();
+    const text = new Two.Text(quote, 0, 0);
+
+    group.add(rect, text);
+    two.add(group);
+
+    // Set the group's translation to the body's position
+    group.translation.set(body.position.x, body.position.y);
+
+    // Store the Two.js group on the Matter.js body for later reference
+    body.render.group = group;
+  }
+
+  // Update Two.js group positions to match Matter.js body positions
+  function updatePositions() {
+    quoteBodies.forEach(body => {
+      const group = body.render.group;
+      group.translation.set(body.position.x, body.position.y);
+      group.rotation = body.angle;
+    });
+  }
+
+
+  // Start the engine
+  Matter.Runner.run(engine);
+
+  // Run the rendering loop
+  let frameCount = 0;
+  let quoteIdx = 0;
+
+  function animate() {
+    requestAnimationFrame(animate);
+    
+    // Add a new quote every 4 frames
+    if (frameCount % 10 === 0) {
+      if (quoteIdx < quotes.length) {
+        const[body, quote] = addQuote(quoteIdx);
+        renderQuoteBody(body, quote);
+        quoteIdx += 1;
+      }
+    }
+
+    updatePositions();
+    
+    // Render the frame
+    two.update();
+    
+    frameCount += 1;
+  }
+
+  // Start the animation
+  animate();
+
+  const debugRender = Matter.Render.create({
+    element: matterDebug,
+    engine: engine,
+    options: {
+        width: matterContainer.clientWidth,
+        height: matterContainer.clientHeight,
+        wireframes: true,
+        background: 'transparent'
+    }
+    });
+  Matter.Render.run(debugRender);
+
+</script>

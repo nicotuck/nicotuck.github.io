@@ -1,23 +1,42 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {%- seo -%}
-    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-    {%- feed_meta -%}
-    {%- if jekyll.environment == 'production' and site.google_analytics -%}
-      {%- include google-analytics.html -%}
-    {%- endif -%}
-    
-    <!-- for mathjax support -->
-    {% if page.usemathjax %}
-        <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-        TeX: { equationNumbers: { autoNumber: "AMS" } }
-        });
-        </script>
-        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?..."></script>
-    {% endif %}
-  </head>
-  
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>{% if page.title == 'Home' %}NicoTuck{% elsif page.title == 'blah' %}{% endif %}</title>
+
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %} A website.{% endif %}">
+  <!-- <meta property="og:type" content="website" /> -->
+  <!-- <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" /> -->
+  <!-- <meta property="og:title" content="{% if page.title == 'Home' %}Markdown Guide{% elsif page.title == 'Get the Book' %}Book | Markdown Guide{% else %}{{ page.title }} | Markdown Guide{% endif %}" />
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %} A free and open-source reference guide that explains how to use Markdown.{% endif %}" />
+  <meta property="og:image" content="https://www.markdownguide.org/assets/images/markdown-guide-og.jpg" /> -->
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%} -->
+  
+  <!-- for mathjax support -->
+  {% if page.usemathjax %}
+    <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  {% endif %}
+
+  <!-- for matter support -->
+  {% if page.usematterjs %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js">
+    </script>
+  {% endif %}
+
+  {% if page.usetwojs %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.8.10/two.min.js" integrity="sha512-D9pUm3+gWPkv/Wl6vd45vRLjdkdEKGje7BxOxYG0N6m4UlEUB7RSljBwpmJNAOuf6txLLtlaRchoKfzngr/bQg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+  {% endif %}
+
+
+  <script src="/assets/javascript/jquery-3.6.4.slim.min.js"></script>
+  <script async src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script async src="/assets/javascript/bootstrap-toc.min.js"></script>
+</head>

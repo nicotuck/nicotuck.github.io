@@ -1,0 +1,28 @@
+.jumbotron-main {
+    @extend .p-5;
+    @extend .m-4;
+    @extend .text-bg-primary;
+    @extend .rounded-4;
+    h1 {
+        @extend .display-5;
+        @extend .fw-bold;
+    }
+    p {@extend .fs-5;}
+}
+
+.jumbotron-page {
+    @extend .p-3;
+    @extend .m-2;
+    @extend .text-bg-primary;
+    @extend .rounded-4;
+    h1 {
+        @extend .display-6;
+        @extend .fw-bold;
+    }
+}
+
+.site-footer {
+    padding-top: 20px;
+    margin-top: 50px;
+    @extend .text-bg-light;
+}
