@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Wheel Rolling</title>
     <style>
@@ -7,6 +8,7 @@
             padding: 0;
             margin: 0;
         }
+
         #draw-area {
             position: absolute;
             top: 0;
@@ -14,16 +16,19 @@
         }
     </style>
 </head>
+
 <body>
     <div id="draw-area"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.8.10/two.min.js" integrity="sha512-D9pUm3+gWPkv/Wl6vd45vRLjdkdEKGje7BxOxYG0N6m4UlEUB7RSljBwpmJNAOuf6txLLtlaRchoKfzngr/bQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.8.10/two.min.js"
+        integrity="sha512-D9pUm3+gWPkv/Wl6vd45vRLjdkdEKGje7BxOxYG0N6m4UlEUB7RSljBwpmJNAOuf6txLLtlaRchoKfzngr/bQg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
 </body>
 <script>
-    
+
     const inst = new p5(p => {
-        p.setup = function() { };
+        p.setup = function () { };
     });
 
     // Set up the Two.js drawing
@@ -36,23 +41,23 @@
     const engine = Matter.Engine.create();
     const world = engine.world;
     const runner = Matter.Runner.create();
-    
+
     // Set up the wheel
     const wheelRadius = 100;
     const wheel = Matter.Bodies.circle(
         two.width / 2, two.height / 2, wheelRadius, {
-          friction: 0.9,
-          restitution: 0.4,
-          density: 0.1,
-          label: "wheel",
-      });
+        friction: 0.9,
+        restitution: 0.4,
+        density: 0.1,
+        label: "wheel",
+    });
     const wheelGraphic = two.makeCircle(wheel.position.x, wheel.position.y, wheelRadius);
     Matter.World.add(world, wheel);
-    
+
     // Set up the dummy body
     const dummy = Matter.Bodies.rectangle(wheel.position.x, two.height, 1, 1, { isStatic: true });
     Matter.World.add(world, dummy);
-    
+
     // Connect the wheel and dummy with a spring
     const spring = Matter.Constraint.create({
         bodyA: wheel,
@@ -61,9 +66,9 @@
         damping: 0.001
     });
     Matter.World.add(world, spring);
-    
+
     // Set up the terrain
-    const terrainPoints = [] 
+    const terrainPoints = []
     let noise_x = 0;
     let noise_step = 0.5;
 
@@ -76,14 +81,14 @@
             10, { isStatic: true });
         Matter.World.add(world, segment);
     }
-    for (let x=0; x <= 1.1 * two.width; x += two.width / 20) {
+    for (let x = 0; x <= 1.1 * two.width; x += two.width / 20) {
         terrainPoints.push(
-            new Two.Anchor(x, 100* inst.noise(noise_x)));
-            if (terrainPoints.length > 1) {
-                add_new_terrain_body();
-            }
-            noise_x += noise_step;
+            new Two.Anchor(x, 100 * inst.noise(noise_x)));
+        if (terrainPoints.length > 1) {
+            add_new_terrain_body();
         }
+        noise_x += noise_step;
+    }
     // console.log(terrainPoints.map(tp => [tp.x, tp.y]))
     const terrainGraphic = two.makePath(terrainPoints);
     terrainGraphic.closed = false;
@@ -92,10 +97,10 @@
     //     0 - terrainGraphic.getBoundingClientRect(true).left,
     //     two.height - 100);
     // Matter.Body.translation()
-    box = new Two.Rectangle(0,0, 20, 20);
+    box = new Two.Rectangle(0, 0, 20, 20);
     box.fill = '#000000';
     two.add(box);
-    
+
 
     const frame_vec = Matter.Vector.create(-5, 0);
     var lastTime;
@@ -107,40 +112,41 @@
 
         // Update wheel position
         wheelGraphic.translation.set(wheel.position.x, wheel.position.y);
-        
+
         terrainGraphic.vertices = terrainPoints;
-        
+
         // Remove old terrain segments that have scrolled off the screen
-        if(terrainPoints[0].x <= -two.width/10) {
+        if (terrainPoints[0].x <= -two.width / 10) {
             // console.log(terrainPoints.map(tp => [tp.x, tp.y]))
             terrainPoints.shift();
             offset = terrainPoints[0].x;
             terrainPoints.push(
-                new Two.Anchor(1.1* two.width + offset, 100 * inst.noise(noise_x)));
+                new Two.Anchor(1.1 * two.width + offset, 100 * inst.noise(noise_x)));
             add_new_terrain_body()
             Matter.World.remove(world, world.bodies[0]);
 
         }
-    
+
         // Scroll the terrain and the wheel to simulate the wheel moving
-        for(let i = 0; i < terrainPoints.length; i++) {
+        for (let i = 0; i < terrainPoints.length; i++) {
             terrainPoints[i].x -= 5;
         }
-        for(let i = 0; i < world.bodies.length; i++) {
+        for (let i = 0; i < world.bodies.length; i++) {
             Matter.Body.translate(world.bodies[i], frame_vec, true);
         }
         // Matter.Body.translate(wheel, {x: 0, y: 0});
-    
+
         // Update dummy body to follow the terrain
         Matter.Body.setPosition(dummy, {
             x: wheel.position.x,
             y: two.height - terrainPoints[Math.floor(terrainPoints.length / 2)].y
         });
         two.update()
-    
+
         noise_x += noise_step;
     }
     requestAnimationFrame(animate);
 
 </script>
+
 </html>

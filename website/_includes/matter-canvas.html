@@ -2,7 +2,7 @@
 </div>
 
 <script>
-  
+
   const matterContainer = document.querySelector("#matter-container");
   matterContainer.width = "100%";
   matterContainer.height = "600px";
@@ -15,7 +15,7 @@
   const Composite = Matter.Composite;
   const Events = Matter.Events;
   const engine = Engine.create();
-  
+
 
   // Create an array of quotes
   const quotes = [
@@ -87,11 +87,11 @@
   function addQuote(i) {
     // Choose a random quote from the array
     const quote = quotes[i];
-    
+
     // Create a new falling quote body
     const body = Bodies.rectangle(
-        Math.random() * matterContainer.clientWidth, 0,
-        quote.length * 9 + 10, 40, {
+      Math.random() * matterContainer.clientWidth, 0,
+      quote.length * 9 + 10, 40, {
       friction: 0.9,
       restitution: 0.4,
       density: 0.01,
@@ -102,34 +102,34 @@
         lineWidth: 0,
       }
     });
-    
+
     // Add the body to the quoteBodies array and to the world
     quoteBodies.push(body);
     World.add(engine.world, body);
-    
+
   }
 
   // Call the addQuote function on interval
   var q_idx = 0;
   var interval = setInterval(function () {
-    if(q_idx >= quotes.length - 1) {
+    if (q_idx >= quotes.length - 1) {
       clearInterval(interval);
     }
     addQuote(q_idx);
     q_idx += 1;
-  }, 1000 / 4 );
+  }, 1000 / 4);
   //
 
   // Add an event listener for the afterRender event
-  Events.on(render, "afterRender", function() {
+  Events.on(render, "afterRender", function () {
     // Loop through all the quote bodies
     for (let i = 0; i < quoteBodies.length; i++) {
       const body = quoteBodies[i];
-      
+
       // Render the quote text on the canvas at the current body position
       ctx.font = "16px Verdana";
       ctx.fillStyle = "black";
-      ctx.translate(body.position.x , body.position.y)
+      ctx.translate(body.position.x, body.position.y)
       ctx.rotate(body.angle);
       ctx.textAlign = 'center';
       ctx.fillText(quotes[i], 0, 0);
@@ -154,13 +154,13 @@
       Matter.Vector.create(
         matterContainer.clientWidth / 2,
         matterContainer.clientHeight + 11
-    ));
+      ));
     Matter.Body.setPosition(
       rightwall,
       Matter.Vector.create(
         matterContainer.clientWidth + 11,
         matterContainer.clientHeight / 2
-    ));
+      ));
   }
 
   window.addEventListener("resize", () => handleResize(matterContainer));
@@ -182,5 +182,3 @@
   // Call the clearQuotes function every 5 seconds
   // setInterval(clearQuotes, 20000);
 </script>
-
-

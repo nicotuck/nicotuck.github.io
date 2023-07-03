@@ -1,17 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary mdg-nav">
   <div class="container">
     <a class="navbar-brand" href="/" style="margin-top: 2px; margin-bottom: 3px">
-      <img src="/assets/images/Tooth.png" height="23" width="47" class="d-inline-block align-top" alt="Tooth" style="margin-top: 4px; padding-right: 10px">
+      <img src="/assets/images/Tooth.png" height="23" width="47" class="d-inline-block align-top" alt="Tooth"
+        style="margin-top: 4px; padding-right: 10px">
       Home
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainNav" aria-controls="navbarMainNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainNav"
+      aria-controls="navbarMainNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarMainNav" style="margin-top: 2px">
       <div class="navbar-nav">
         {% for item in site.data.nav-bar %}
-          <a class="nav-item nav-link"  href={{ item.link }}> {{ item.name }}</a>
-          <!-- <a class="nav-item nav-link {% if page.title == 'Getting Started' %}active{% endif %}" href="/getting-started/">Get Started</a> -->
+        <a class="nav-item nav-link" href={{ item.link }}> {{ item.name }}</a>
+        <!-- <a class="nav-item nav-link {% if page.title == 'Getting Started' %}active{% endif %}" href="/getting-started/">Get Started</a> -->
         {% endfor %}
 
       </div>

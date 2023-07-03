@@ -45,9 +45,9 @@
   const quoteBodies = [];
 
   function dist(x1, y1, x2, y2) {
-    var x = Math.abs(x2-x1);
+    var x = Math.abs(x2 - x1);
     var y = Math.abs(y2 - y1);
-    return Math.sqrt((x*x) + (y*y))
+    return Math.sqrt((x * x) + (y * y))
   }
 
   function getRectBodyWidthHeight(body) {
@@ -69,11 +69,11 @@
     const body = Bodies.rectangle(
       Math.random() * matterContainer.clientWidth, -10,
       quote.length * 9 + 8, 40, {
-          friction: 0.9,
-          restitution: 0.4,
-          density: 0.1,
-          label: "quote",
-      });
+      friction: 0.9,
+      restitution: 0.4,
+      density: 0.1,
+      label: "quote",
+    });
 
     // Add the body to the quoteBodies array and to the world
     quoteBodies.push(body);
@@ -82,7 +82,7 @@
     return [body, quote];
   }
 
-    // Create the ground
+  // Create the ground
   const ground = Bodies.rectangle(
     matterContainer.clientWidth / 2,
     matterContainer.clientHeight + 11, 20000, 20, { isStatic: true });
@@ -105,7 +105,7 @@
     // Remove all bodies with the label "quote"
     const quotesToRemove = Composite.allBodies(engine.world).filter(body => body.label === "quote");
     World.remove(engine.world, quotesToRemove);
-    
+
     return quotesToRemove;
   }
 
@@ -117,19 +117,19 @@
       Matter.Vector.create(
         matterContainer.clientWidth / 2,
         matterContainer.clientHeight + 11
-    ));
+      ));
     Matter.Body.setPosition(
       leftwall,
       Matter.Vector.create(
         -11,
         matterContainer.clientHeight / 2
-    ));
+      ));
     Matter.Body.setPosition(
       rightwall,
       Matter.Vector.create(
         matterContainer.clientWidth + 11,
         matterContainer.clientHeight / 2
-    ));
+      ));
   }
 
   window.addEventListener("resize", handleResize);
@@ -154,9 +154,11 @@
   // RENDERER
   // Set up Two.js
   const two = new Two(
-    { width: matterContainer.clientWidth,
+    {
+      width: matterContainer.clientWidth,
       height: matterContainer.clientHeight,
-      type: Two.Types.canvas, }).appendTo(matterContainer);
+      type: Two.Types.canvas,
+    }).appendTo(matterContainer);
 
   // Render quote bodies
   function renderQuoteBody(body, quote) {
@@ -197,21 +199,21 @@
 
   function animate() {
     requestAnimationFrame(animate);
-    
+
     // Add a new quote every 4 frames
     if (frameCount % 10 === 0) {
       if (quoteIdx < quotes.length) {
-        const[body, quote] = addQuote(quoteIdx);
+        const [body, quote] = addQuote(quoteIdx);
         renderQuoteBody(body, quote);
         quoteIdx += 1;
       }
     }
 
     updatePositions();
-    
+
     // Render the frame
     two.update();
-    
+
     frameCount += 1;
   }
 
@@ -222,12 +224,12 @@
     element: matterDebug,
     engine: engine,
     options: {
-        width: matterContainer.clientWidth,
-        height: matterContainer.clientHeight,
-        wireframes: true,
-        background: 'transparent'
+      width: matterContainer.clientWidth,
+      height: matterContainer.clientHeight,
+      wireframes: true,
+      background: 'transparent'
     }
-    });
+  });
   Matter.Render.run(debugRender);
 
 </script>

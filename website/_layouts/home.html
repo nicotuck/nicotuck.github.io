@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
-  <body data-bs-spy="scroll" data-bs-target="#toc">
-    {% include nav.html %}
+{% include head.html %}
 
-    <div class="jumbotron-main">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h1 class="no-anchor">{{ page.title }}</h1>
-            <p>A blog about things I like and more.</p>
-          </div>
-          <div class="col">
-            <img class="rounded-4" src="/assets/images/test.jpg" height="100%" width="100%" alt="jumbo">
-          </div>
-        </div>
-      </div>
-    </div>
+<body data-bs-spy="scroll" data-bs-target="#toc">
+  {% include nav.html %}
+
+  <div class="jumbotron-main">
     <div class="container">
-      <div class="row row-offcanvas row-offcanvas-right">
+      <div class="row">
         <div class="col">
-          <div class="fs-5">{{ content }}</div>
-          {%- if site.posts.size > 0 -%}
-          
-            <h1>Posts</h1>
-              {% for post in site.posts %}
-                {% assign item = post %}
-                {% include item-card-h.html item=item %}
-              {%- endfor -%}
-          {%- endif -%}
+          <h1 class="no-anchor">{{ page.title }}</h1>
+          <p>A blog about things I like and more.</p>
         </div>
-
-        <div class="col-md-3 d-none d-md-block" id="sidebar">
-          <nav id="toc" data-toggle="toc" class="sticky-top" style="z-index:1"></nav>
+        <div class="col">
+          <img class="rounded-4" src="/assets/images/test.jpg" height="100%" width="100%" alt="jumbo">
         </div>
       </div>
     </div>
-    {% include footer.html %}
-  </body>
+  </div>
+  <div class="container">
+    <div class="row row-offcanvas row-offcanvas-right">
+      <div class="col">
+        <div class="fs-5">{{ content }}</div>
+        {%- if site.posts.size > 0 -%}
+
+        <h1>Posts</h1>
+        {% for post in site.posts %}
+        {% assign item = post %}
+        {% include item-card-h.html item=item %}
+        {%- endfor -%}
+        {%- endif -%}
+      </div>
+
+      <div class="col-md-3 d-none d-md-block" id="sidebar">
+        <nav id="toc" data-toggle="toc" class="sticky-top" style="z-index:1"></nav>
+      </div>
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
+
 </html>
