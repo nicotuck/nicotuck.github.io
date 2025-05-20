@@ -1,5 +1,13 @@
-![](_page_236_Figure_1.jpeg)
-![](_page_101_Picture_0.jpeg)
+---
+layout: page
+title: Makani Paper
+blurb: Makani Paper
+thumbnail: /assets/portfolio/ResumeImg.png
+permalink: /portfolio/makani_paper
+---
+ 
+<div><img src="/assets/images/makani_paper/page_236_Figure_1.jpeg" class="img-fluid" alt=""></div>
+<div><img src="/assets/images/makani_paper/page_101_Picture_0.jpeg" class="img-fluid" alt=""></div>
 
 Airborne Wind Performance: Key Lessons From More Than a Decade of Flying Kites Corresponding author: Nicholas Tucker
 
@@ -13,68 +21,7 @@ Intended for electronic publication and distribution. Copies of this volume may 
 
 Published September 2020
 
-| 1 Introduction<br>1.1 Executive Summary<br>1.2 Example Systems | 93<br>93<br>95 |
-| -------------------------------------------------------------- | -------------- |
-| 1.3 Numerical Model                                            | 95             |
-| 2 A Measure of Performance                                     | 97             |
-| 3 Balance of System                                            | 99             |
-| 4 Maintenance                                                  | 107            |
-| 5 System Cost                                                  | 113            |
-| 6 Kite Power                                                   | 114            |
-| 6.1 Loyd Revisited                                             | 116            |
-| 6.1.1 Tether Drag Losses                                       | 119            |
-| 6.1.2 Path Offset Losses                                       | 121            |
-| 6.1.3 Wind Shear Gains                                         | 123            |
-| 6.1.4 Turning Losses                                           | 124            |
-| 6.1.5 Efficiency Losses                                        | 130            |
-| 6.1.6 Gravity Losses                                           | 131            |
-| 6.1.7 Minimum Airspeed Losses                                  | 140            |
-| 6.1.8 Tension Limiting Losses                                  | 140            |
-| 6.1.9 Putting It Together                                      | 142            |
-| 6.2 Lessons from Loyd Revisited                                | 149            |
-| 6.2.1 Minimum Turning Radius Constraints                       | 149            |
-| 6.2.2 The Push for Tighter Loops                               | 154            |
-| 6.2.3 Higher Power from Stronger Winds at Altitude?            | 156            |
-| 6.2.4 Comparing AWT with HAWT Power Production                 | 158            |
-| 6.3 Conclusion<br>6.4 A Numerical Take on Path Shape           | 166<br>167     |
-|                                                                |                |
-| 7 Mass                                                         | 171            |
-| 7.1 Hover                                                      | 171            |
-| 7.2 No Wind Upstroke                                           | 174            |
-| 7.3 Mass in Crosswind                                          | 174            |
-| 8 Multi-kites                                                  | 177            |
-| 9 M600 Power Performance                                       | 182            |
-| 10 High Winds Are Hard                                         | 185            |
-| 10.1 Overview                                                  | 185            |
-
-| 10.2 The Challenge                  | 185 |     |     |
-| ----------------------------------- | --- | --- | --- |
-| 10.3 Strategies                     | 188 |     |     |
-| 10.3.1 Reducing lift                | 188 |     |     |
-| 10.3.2 Non-optimal speed            | 190 |     |     |
-| 10.3.3 Path                         | 193 |     |     |
-| 10.3.4 Excess Drag                  | 199 |     |     |
-| 10.3.5 Piecing Together a Strategy  | 201 |     |     |
-| 10.3.5.1 Path Strategy              | 202 |     |     |
-| 10.3.5.2 Lift and Speed Strategy    | 203 |     |     |
-| 10.3.5.3 Rotor Strategy             |     |     |     |
-| 10.3.6 Poking holes in our strategy | 209 |     |     |
-| 10.3.6.1 Turbulence                 | 211 |     |     |
-| 10.3.6.2 Control Variability        | 212 |     |     |
-| 10.3.6.3 Tether Dynamics            | 213 |     |     |
-| 10.3.6.4 All the Rotors             | 214 |     |     |
-| 10.3.6.5 Kite Acrobatics            | 215 |     |     |
-| 10.4 Power Saturation Summary       | 216 |     |     |
-| 11 References                       | 220 |     |     |
-| 12 Appendix                         | 221 |     |     |
-| 12.1 Numerical Model Description    | 221 |     |     |
-| 12.1.1 Overview                     | 221 |     |     |
-| 12.1.2 Sub-Models                   | 222 |     |     |
-| 12.1.2.1 Rotor Model                | 223 |     |     |
-| 12.1.2.2 Aero Model                 | 224 |     |     |
-| 12.1.3 Known Shortcomings           | 224 |     |     |
-
-# <span id="page-104-0"></span>1 Introduction
+# 1 Introduction
 
 The goal of this document is to highlight several fundamental challenges for airborne wind energy that Makani has learned, in particular those that are perhaps under-represented in the field. The M600 (Makani's prototype that was tested from 2015-2019) was unable to meet its intended performance targets. While we will touch upon the specific issues of that design, the intent here is to discuss the challenges of energy kite performance more broadly, building up an understanding rather than a specific set of fixes. Where possible, we'll build an analytical foundation to frame the discussion, but building a complete mathematical toolset to design or evaluate an energy kite is not the explicit goal. As such, we presume the reader is somewhat familiar with the fundamentals of wind energy, and can pick up where the provided analytical tools stop short.
 
@@ -84,44 +31,43 @@ In addition, although Makani spent several of its early years designing, buildin
 
 Finally, this work is attempting to collect, condense, revise, and expand upon the efforts of dozens of individuals spanning many years. It's hoped that this author has represented their work appropriately.
 
-## <span id="page-104-1"></span>1.1 Executive Summary
+## 1.1 Executive Summary
 
 In order for any energy source to gain substantial market share, the cost of energy over the life of the system must be competitive. Renewables such as wind and solar have the added challenge that turning on your microwave doesn't tell the sun to shine brighter or the wind to blow harder, creating a mismatch between energy supply and demand. They then need to be even less costly in order to justify excess capacity that is only used when demand is highest, or potentially require additional infrastructure costs for energy storage. With the cost of energy as our guiding metric, we'll discuss the key challenges airborne wind energy faces.
 
 These challenges can be summarized as follows:
 
--   1. Supporting infrastructure in a wind turbine plant is a large portion of the total cost of energy, especially offshore, and the primary way to reduce these costs is to increase the system size.
-    -   a. Airborne wind energy has some inherent infrastructure cost advantages compared to traditional wind turbines, particularly in deep water offshore applications, but required components and their share of the total cost of energy do not substantially differ.
--   2. Despite several similarities between airborne wind turbines and aircraft, maintenance costs need to be approximately an order of magnitude less than similarly priced aircraft in order for airborne wind turbines to remain viable.
-    -   a. It's not appropriate to directly apply the maintenance costs from traditional wind turbines to airborne wind turbines, as much of the improvement in the industry is the result of increased scale and reduced number of components for a given plant size, properties that airborne wind energy also needs to pursue.
-    -   b. Small systems will struggle to have maintenance costs per unit power as low as larger systems, regardless of their perceived simplicity, due to the additional number of components.
--   3. Reducing turbine costs cannot be the primary avenue for long term success, given that turbine costs form less than half of the total cost of energy for a plant, and about a quarter of total costs offshore. Turbine costs can lose the battle for a competitive cost of energy, but it's exceedingly difficult to win the battle on turbine costs alone.
-    -   a. It is more important for airborne wind energy to demonstrate a path to grow system scale than reduce turbine costs, as comparatively minor reductions in infrastructure and maintenance costs, as a result of larger scale, can easily outweigh aggressive turbine cost reductions.
--   4. Kites are largely free from the power limits imposed by the fixed swept area of the blades on a traditional wind turbine, but these gains are offset by the introduction of new loss mechanisms.
-    -   a. Path offset losses, tether drag, and powertrain efficiency/cycle-time are among the largest, typically reducing power to a third of the theoretical maximum of the kite alone.
-    -   b. A small minimum turning radius and reliable operation close to that limit is essential to reduce gravity pumping losses and path offset losses.
-    -   c. The specifics of path shape are relatively unimportant even in theory, and even less relevant in practice. Paths must generally be as low and as tight as practical, but otherwise, simpler is better.
-    -   d. Typical losses negate any gains from accessing stronger high altitude winds unless tether drag is exceptionally low and wind shear is very high.
-    -   e. Kite specific losses are on a similar scale as the induced flow losses for a typical 3 bladed traditional wind turbine, effectively trading one set of losses for another.
--   5. Mass is a key design constraint, especially for hovering systems featuring onboard generation.
-
--   a. Power generation is strongly tied to wing area and weakly tied to mass, so the target for an optimal design is to get the largest wing possible into crosswind.
--   6. Multiple kites on a single ground station or a single shared tether have some clear benefits, but those benefits are only accessible after solving many novel control challenges, presenting a difficult development story.
-    -   a. Multi-kites begin to see induced losses similar to traditional wind turbines, somewhat degrading their benefits.
-    -   b. Simpler configurations of multi-kites may be worthwhile to pursue once a reliable single kite product is well developed and tested.
--   7. High winds pose a number of unsolved challenges, and these challenges only present themselves in the context of imperfect control and a turbulent wind field.
-    -   a. The main mechanism to limit power for traditional turbines, reducing lift, is difficult to implement for kites as they also use lift to turn.
-    -   b. Energy kites experience large swings in potential energy over their path, complicating other strategies as they must heavily reduce power for part of the path, and maximize it for the rest.
-    -   c. In order to ensure the system can maintain adequate margins, necessary because of the limitations mentioned above, it's likely that the power components cannot be fully saturated at high wind speeds.
-    -   d. The nature of the problem makes it difficult to evaluate outside the context of detailed flight simulation or physical flight tests.
+-   Supporting infrastructure in a wind turbine plant is a large portion of the total cost of energy, especially offshore, and the primary way to reduce these costs is to increase the system size.
+    -   Airborne wind energy has some inherent infrastructure cost advantages compared to traditional wind turbines, particularly in deep water offshore applications, but required components and their share of the total cost of energy do not substantially differ.
+-   Despite several similarities between airborne wind turbines and aircraft, maintenance costs need to be approximately an order of magnitude less than similarly priced aircraft in order for airborne wind turbines to remain viable.
+    -   It's not appropriate to directly apply the maintenance costs from traditional wind turbines to airborne wind turbines, as much of the improvement in the industry is the result of increased scale and reduced number of components for a given plant size, properties that airborne wind energy also needs to pursue.
+    -   Small systems will struggle to have maintenance costs per unit power as low as larger systems, regardless of their perceived simplicity, due to the additional number of components.
+-   Reducing turbine costs cannot be the primary avenue for long term success, given that turbine costs form less than half of the total cost of energy for a plant, and about a quarter of total costs offshore. Turbine costs can lose the battle for a competitive cost of energy, but it's exceedingly difficult to win the battle on turbine costs alone.
+    -   It is more important for airborne wind energy to demonstrate a path to grow system scale than reduce turbine costs, as comparatively minor reductions in infrastructure and maintenance costs, as a result of larger scale, can easily outweigh aggressive turbine cost reductions.
+-   Kites are largely free from the power limits imposed by the fixed swept area of the blades on a traditional wind turbine, but these gains are offset by the introduction of new loss mechanisms.
+    -   Path offset losses, tether drag, and powertrain efficiency/cycle-time are among the largest, typically reducing power to a third of the theoretical maximum of the kite alone.
+    -   A small minimum turning radius and reliable operation close to that limit is essential to reduce gravity pumping losses and path offset losses.
+    -   The specifics of path shape are relatively unimportant even in theory, and even less relevant in practice. Paths must generally be as low and as tight as practical, but otherwise, simpler is better.
+    -   Typical losses negate any gains from accessing stronger high altitude winds unless tether drag is exceptionally low and wind shear is very high.
+    -   Kite specific losses are on a similar scale as the induced flow losses for a typical 3 bladed traditional wind turbine, effectively trading one set of losses for another.
+-   Mass is a key design constraint, especially for hovering systems featuring onboard generation.
+    -   Power generation is strongly tied to wing area and weakly tied to mass, so the target for an optimal design is to get the largest wing possible into crosswind.
+-   Multiple kites on a single ground station or a single shared tether have some clear benefits, but those benefits are only accessible after solving many novel control challenges, presenting a difficult development story.
+    -   Multi-kites begin to see induced losses similar to traditional wind turbines, somewhat degrading their benefits.
+    -   Simpler configurations of multi-kites may be worthwhile to pursue once a reliable single kite product is well developed and tested.
+-   High winds pose a number of unsolved challenges, and these challenges only present themselves in the context of imperfect control and a turbulent wind field.
+    -   The main mechanism to limit power for traditional turbines, reducing lift, is difficult to implement for kites as they also use lift to turn.
+    -   Energy kites experience large swings in potential energy over their path, complicating other strategies as they must heavily reduce power for part of the path, and maximize it for the rest.
+    -   In order to ensure the system can maintain adequate margins, necessary because of the limitations mentioned above, it's likely that the power components cannot be fully saturated at high wind speeds.
+    -   The nature of the problem makes it difficult to evaluate outside the context of detailed flight simulation or physical flight tests.
 
 Our hope is that by pointing out these potholes, others can then fill or avoid them. So, get ready for a bumpy ride, as we're aiming for a lot of potholes—there is much to discuss!
 
-## <span id="page-106-0"></span>1.2 Example Systems
+## 1.2 Example Systems
 
 Throughout this text, we'll be pulling example values from several systems to demonstrate various effects. The key values for those systems are outlined in table 1 . <sup>1</sup>
 
-## <span id="page-106-1"></span>1.3 Numerical Model
+## 1.3 Numerical Model
 
 Throughout this text we'll occasionally rely on results from a [numerical model whose source](#page-231-0) [code has been released \[1\]](#page-231-0) . This model is commonly referred to as the FBL at Makani. In most cases here, we lean on it to simply provide a numerical justification for a simplifying analytical assumption, but we'll also dive into a particular set of optimized results for a complete system in [s ection 10, High Winds Are Hard .](#page-195-0) It's not the goal of this paper to describe that model in detail, but there is a brief description in the appendix of this section.
 
@@ -157,7 +103,7 @@ Throughout this text we'll occasionally rely on results from a [numerical model 
 
 <sup>3</sup> Varied for different tests, but the value represents the bulk of the flight test data.
 
-# <span id="page-108-0"></span>2 A Measure of Performance
+# 2 A Measure of Performance
 
 How do we best describe the performance of a source of energy? What are the key metrics? Ultimately, the goal of any source of energy, wind turbines included, is to provide energy that is needed at a competitive cost, and the metric of greatest importance here is the Levelized Cost of Energy, or LCOE.
 
@@ -191,29 +137,29 @@ In any comparison utilizing only one of these component metrics, one needs to ke
 
 <sup>6</sup> A high capacity factor has value independent of LCOE, but can't be the singular goal. If this were the case, we'd see the large rotors from, for example, 2 MW HAWTs paired with small 500 kW power systems. Capacity factor would be high, but LCOE and total energy production would be poor, as the expensive rotors are underutilized. Heavily saturated markets where capacity factor is highly valued are trending this way, but this doesn't well represent new markets.
 
-# <span id="page-110-0"></span>3 Balance of System
+# 3 Balance of System
 
 Of the many improvements made to traditional horizontal axis wind turbines (HAWTs) over decades, perhaps the most obvious is the ever increasing system size and power rating (illustrated in figure 1 ), which is expected to continue, especially offshore.
 
-![](_page_110_Figure_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_110_Figure_4.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 1 : HAWTs have grown dramatically over time, as shown in this 2011 diagram from the [IPCC Special Report on Renewable Energy Sources and Climate Change Mitigation \[4\] .](#page-231-0) As of 2020, the largest HAWTs are ~15 MW, and are expected to continue to grow larger.**
+##### **Figure 1 : HAWTs have grown dramatically over time, as shown in this 2011 diagram from the [IPCC Special Report on Renewable Energy Sources and Climate Change Mitigation \[4\] .](#page-231-0) As of 2020, the largest HAWTs are ~15 MW, and are expected to continue to grow larger.**
 
 With the additional constraint of needing the system to fly, airborne wind energy (AWE) systems face bigger difficulties increasing scale than HAWTs do. It's important to understand the pressures behind the growth of HAWTs and see how they may also apply to airborne wind turbines (AWTs). BoS is a surprisingly large portion of the total LCOE for wind energy systems and is indirectly responsible for much of this trend. What creates this trend? Why is one massive system better than several smaller systems if, when combined, they make the same total amount of power? To better understand, let's look at some examples of the importance of BoS costs, beginning with onshore HAWTs.
 
 Numerous examples can be found in literature of breakdowns of these costs for HAWTs, such as the example in figure 2 from the [NREL 2018 Cost of Wind Energy Review \[5\] .](#page-231-0)
 
-![](_page_111_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_111_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 2 : Component-level LCOE contribution for the 2018 land-based wind reference project. Note: O&M represents operation and maintenance. Image is from [NREL 2018 Cost of Wind](#page-231-0) [Energy Review, \[5, fig ES1\] .](#page-231-0)**
+##### **Figure 2 : Component-level LCOE contribution for the 2018 land-based wind reference project. Note: O&M represents operation and maintenance. Image is from [NREL 2018 Cost of Wind](#page-231-0) [Energy Review, \[5, fig ES1\] .](#page-231-0)**
 
 In this example, BoS and related soft costs (the purple and blue colors) are approximately 22% of the system LCOE for an onshore system.
 
 Makani developed a bottom-up system cost, scaling, and performance model, and here we compare the total cost of energy breakdown in that model using a system similar to our MX2 next generation system under similar plant and site conditions as the NREL study.
 
-![](_page_112_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_112_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 3 : LCOE breakdown for onshore, using a system similar to our MX2 system under similar plant and site conditions as the NREL study.**
+##### **Figure 3 : LCOE breakdown for onshore, using a system similar to our MX2 system under similar plant and site conditions as the NREL study.**
 
 Approximating the categories (and roughly the colors) from the NREL data, we find that AWTs have similar cost drivers. They aren't meaningfully different in components—collection systems still need to be placed, substations and connections still need to be made, and access routes to install and maintain systems must be in place. The commonality means BoS costs play a similarly large role for AWTs as they do for HAWTs.
 
@@ -221,7 +167,7 @@ How do BoS costs relate to system scale? NREL provides scaling models for BoS co
 
 Direct comparisons should be qualified—the models were developed independently and don't necessarily share identical underlying assumptions. However, best attempts were made to make similar inputs, and differences in output appear justified. Using these models, we can hold the total rated power of the plant constant and vary the system rated power, resulting in fewer systems in the plant as each individual system increases in size.
 
-![](_page_113_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_113_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 4 : Specific BoS Costs versus P rated for 100 MW onshore plant.**
 
@@ -231,9 +177,9 @@ Assuming that other system performance metrics are similar, AWTs appear to need 
 
 For offshore installations, we never created scaling models to fill out an entire curve, but we expect the shapes to be similar, just shifted substantially up and to the right, for both AWTs and HAWTs. This is easily explained by again pulling from the NREL case study, this time for offshore floating platforms:
 
-![](_page_114_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_114_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 5 : Component-level LCOE contribution for the 2018 floating offshore wind reference project. Image is from [NREL 2018 Cost of Wind Energy Review \[5, fig ES3\] .](#page-231-0)**
+##### **Figure 5 : Component-level LCOE contribution for the 2018 floating offshore wind reference project. Image is from [NREL 2018 Cost of Wind Energy Review \[5, fig ES3\] .](#page-231-0)**
 
 The BoS and associated soft costs dominate the total cost of energy for offshore systems, at ~52% of the total. The turbine is just a small fraction of the cost of energy! Making electrical connections, running mooring lines, and making large floating platforms is expensive, quickly taking over and defining the problem. It becomes justifiable to spend more on the turbine on a cost-per-rated-watt basis to grow the system and push down relative BoS costs.
 
@@ -241,9 +187,9 @@ Again, it's important to highlight that for most costs here, AWTs do not substan
 
 Several rough case studies for offshore systems at Makani confirm similar cost breakdowns. Figure 6 shows the results for one such case study, again matching conditions to the NREL example as much as possible, using a system similar to the MX2:
 
-![](_page_115_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_115_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 6 : LCOE breakdown for floating offshore, using a system similar to our MX2 system under similar plant and site conditions as the NREL study. <sup>7</sup>**
+##### **Figure 6 : LCOE breakdown for floating offshore, using a system similar to our MX2 system under similar plant and site conditions as the NREL study. <sup>7</sup>**
 
 The turbine share of total costs for AWTs is smaller than for HAWTs—in this example, we're using the same system as onshore. Larger offshore HAWTs generally pay a higher cost per rated power to reduce more BoS costs for an overall win. BoS is less dominant for onshore systems, so this tradeoff is less pronounced onshore—this is the main reason why offshore systems are larger than onshore systems today. The optimum for offshore AWTs will follow the <sup>8</sup> same trend—larger systems reduce dominating BoS costs—but using the same system in this comparison means we're unable to capture this effect.
 
@@ -263,9 +209,9 @@ We expect AWTs to have an enduring advantage in platform cost-per-rated-watt ove
 
 The combined effect of these factors leads to smaller platforms that are less expensive to build and simpler to deploy.
 
-![](_page_116_Figure_8.jpeg)
+<div><img src="/assets/images/makani_paper/page_116_Figure_8.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 7 : Notional offshore platforms for fixed bottom (left) HAWTs, floating (center) HAWTs, and AWTs (right), with rough platform tonnage per rated watt.**
+##### **Figure 7 : Notional offshore platforms for fixed bottom (left) HAWTs, floating (center) HAWTs, and AWTs (right), with rough platform tonnage per rated watt.**
 
 As shown in figure 7 , Makani anticipated approximately an order of magnitude less foundation mass per unit power. This forms an enduring advantage for AWTs: even as system scale increases, the relative lack of an overturning moment will remain, keeping platforms small. Of course, this cost saving is primarily on the floating foundation itself. Installation costs per system go down as well, but, if systems are small, will need to be repeated for many systems. Electrical infrastructure follows this trend as well, but here AWTs have no initial advantage, requiring similar connections and installation processes.
 
@@ -275,7 +221,7 @@ In addition, many markets are increasingly space constrained—it doesn't appear
 
 AWTs can potentially meet renewable energy demand for small or semi-permanent installations in places where a large HAWT would be difficult to install, but in order to directly compete with HAWTs in the utility energy market and have a significant impact on overall renewable energy penetration, AWTs have significant incentive to be approximately 1 MW or larger.
 
-# <span id="page-118-0"></span>4 Maintenance
+# 4 Maintenance
 
 Keeping the turbines operating via planned and unplanned maintenance is nearly the entirety of operating costs for turbines—land lease and insurance is typically a small component.
 
@@ -309,9 +255,9 @@ Let's put these figures in context. In order to do so, we'll abandon any pretens
 
 We'll assume a of 0.1 for this exercise, typical for projects with a 20 year life in well _kF CR_ developed economies. AWTs, especially rigid wing onboard generation ones, share a lot in common with small aircraft, so to draw the comparison, we'll compare the cost of the system with the cost of maintenance for several types of flying vehicles. We'll draw lines to represent the required to meet a \$40/MWhr LCOE target. _kcapex_
 
-![](_page_120_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_120_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 8 : System cost versus maintenance cost for various types of (mostly) flying vehicles.**
+##### **Figure 8 : System cost versus maintenance cost for various types of (mostly) flying vehicles.**
 
 The resulting plot in figure 8 lays out the challenge clearly—wind turbines need maintenance cost per hour relative to system cost comparable to the absolute best aviation can muster with heavy commercial aviation passenger planes. As we move up and left and maintenance costs become a larger share, we need a lower cost-per-rated-watt (a lower ) to offset the _kcapex_ increased maintenance costs.
 
@@ -319,7 +265,7 @@ Rather unsurprisingly, anything close to the relative maintenance costs of gener
 
 Are maintenance costs an order of magnitude less than comparably priced aircraft a challenge? After all, the electric generators of AWTs are much simpler, and the reliability demands much lower, than the crewed gas turbine and piston powered aircraft we're comparing them to. A simple bottom-up comparison was completed, pulling several sources of data to create a hodgepodge machine comparable to an AWT—the airframe-only maintenance expenses for a common general aviation aircraft, combined with estimated maintenance costs for two electric car powertrains.
 
-![](_page_121_Picture_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_121_Picture_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 9 : A conglomerate system resembling the complexity of an AWT—a simple airframe and several electric powertrain units.**
 
@@ -372,7 +318,7 @@ costs washing out the perceived benefits of those changes. A maintenance model i
 
 All of this is to say that maintenance costs are another compelling reason for energy systems to be as large as possible, and AWTs are not exempt, despite having comparatively easier to access and maintain power systems than HAWTs.
 
-# <span id="page-124-0"></span>5 System Cost
+# 5 System Cost
 
 Although the turbine itself draws all the attention, modern turbines are now so cost effective that wind energy costs have become primarily a siting, infrastructure, maintenance, and financing problem. As we saw above, the turbine itself is typically less than half the total cost of energy onshore, and a quarter or less offshore. Wind energy's ongoing challenge is to increase the denominator—lowering the cost of energy by increasing energy production—and to increase system rating to reduce balance of system and maintenance costs.
 
@@ -386,13 +332,13 @@ Makani developed cost models, estimates, and vendor quotes that show a path to a
 
 <sup>10</sup> Despite several multi-year efforts from several companies, no AWT effort has publicly demonstrated hands-off operation of even a moderate sized (>500 kW) AWT for a reasonable length of time (>6 months of operation at a high level of availability) while achieving the necessary performance level. As Makani has clearly demonstrated, growing development costs and timelines can be hard to justify.
 
-# <span id="page-125-0"></span>6 Kite Power
+# 6 Kite Power
 
 We finally arrive at the last piece of the LCOE puzzle, the energy production of the turbine. In this section, we'll introduce an analytical model to isolate the major sensitivities and losses for an AWT's power. To do so, we'll embody the mantra that "all models are wrong, but some are useful" by making extensive simplifying assumptions. Our goal is a relatively simple model that can be coded in an afternoon and teaches the big lessons on how to get power from a kite —the end result only needs to broadly capture the sensitivities to be useful.
 
 Before we build a power model, we need a brief discussion of how we translate power into energy. Power is a function of wind speed, so turbine performance is typically presented as <sup>11</sup> power versus wind speed, called a power curve. A typical power curve will appear like the following, figure 10 :
 
-![](_page_125_Figure_5.jpeg)
+<div><img src="/assets/images/makani_paper/page_125_Figure_5.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 10 : A notional power curve for a wind turbine with key wind speeds denoting different regimes specified.**
 
@@ -404,7 +350,7 @@ Power performance from cut-in to first rated power is dictated by the turbine's 
 
 A power curve does not directly give us the capacity factor, , needed to determine LCOE. _kCF_ Capacity factor is a function of both the power curve and the wind speed probability distribution. Wind speed probabilities are site specific, but are commonly described with "standard" distributions, taking the form of a Rayleigh curve. Sites can be classified by their average wind speed, with the International Electrotechnical Commission (IEC) specifying high (class I), to very low (class IV) categories. Rayleigh distributions for those average wind speeds is shown in figure 11 below:
 
-![](_page_126_Figure_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_126_Figure_4.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 11 : Wind probability distributions for IEC Wind Classes, assuming a typical Rayleigh distribution.**
 
@@ -412,7 +358,7 @@ A wind speed distribution convolved with a power curve then provides a power pro
 
 We'll leave this exercise to the reader. The goal here is to describe what we can do to influence the capacity factor rather than to arrive at a particular LCOE estimate. It's sufficient to draw a quick, obvious conclusion: moving the power curve between cut-in to first rated power to the left, via increasing turbine performance, increases capacity factor and lowers LCOE.
 
-## <span id="page-127-0"></span>6.1 Loyd Revisited
+## 6.1 Loyd Revisited
 
 All wind turbines generate power by converting the kinetic energy of the wind into useful motion. Power available in the wind for a given area perpendicular to the wind direction is given by:
 
@@ -424,7 +370,7 @@ $$P\_{\rm HAWT} = \frac{1}{2} C\_{\rm HAWT} \otimes A\_{\rm wept} \nu\_w \, ^\ot
 
 Translating this to AWTs, we see an immediate disconnect: AWTs can sweep out a variable area with respect to the wind. Without a fixed , AWTs can be largely unburdened by the amount _Aswept_ of power available in a given area of wind, as they can easily sweep out a large area relative to the limits of the kite and its power system. It's instead useful to define a performance metric, , ζ in terms of the kite's wing area, , rather than the swept area, such that: _S_
 
-<span id="page-127-1"></span>
+
 $$P\_{AWT} = \,\_2\text{``}\mathfrak{J}\mathfrak{g}\mathrm{S}\nu\_{\text{w}}\,^3\text{\*\*}\,\tag{10}$$
 
 Unlike the HAWT case, there is no clear limit on power. We need a different base to build our reference for AWT power. To find it, we look to the foundational paper from [Loyd \[7\] ,](#page-231-0) recontextualized for use here, with some strong influence from [Vander Lind](#page-231-0) [\[8\]](#page-231-0) .
@@ -435,9 +381,9 @@ We begin by assuming a kite is flying perpendicular to the wind at speed , with 
 
 generation kite, we extract power from the force on the rotors, , at the airspeed of the kite _F<sup>r</sup>_ (the apparent wind), , such that . We can then set up the following force balance. _v<sup>a</sup> F<sup>r</sup>_ = _P va_
 
-![](_page_128_Figure_3.jpeg)
+<div><img src="/assets/images/makani_paper/page_128_Figure_3.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 12 : Force balance for an onboard generation kite. The wind and kite speeds (black), create a "kiting triangle" that tilts the lift and drag forces (all forces in blue) forwards such that there is a component of lift pushing the kite along.**
+##### **Figure 12 : Force balance for an onboard generation kite. The wind and kite speeds (black), create a "kiting triangle" that tilts the lift and drag forces (all forces in blue) forwards such that there is a component of lift pushing the kite along.**
 
 From figure 12 , we can utilize the similar triangles of the speeds and the forces to find the following relationship for the balance of forces along the axis: _v<sup>a</sup>_
 
@@ -445,24 +391,24 @@ $$\frac{P}{\nu\_a} + \frac{1}{2} \mathfrak{g} \mathbf{C}\_D \mathbf{S} \nu\_a^2 
 
 If we assume that , we can apply the small angle approximation that and solve _<sup>v</sup> <sup>k</sup>_ <sup>≫</sup> _<sup>v</sup><sup>w</sup> <sup>v</sup><sup>a</sup>_ <sup>≈</sup> _<sup>v</sup><sup>k</sup>_ for power, simplifying this to:
 
-<span id="page-128-0"></span>
+
 $$P\_- = \frac{1}{2} \varrho S \mathbf{v}\_k^{\ 3} \left( C\_L \frac{\mathbf{v}\_w}{\mathbf{v}\_k} - C\_D \right) \tag{12}$$
 
 Tension is an important measure for AWT design, so let's also find a relationship for it.
 
 Again applying the small angle approximation we did above, we can simply assume that tension is approximately equal to lift:
 
-<span id="page-129-2"></span>
+
 $$F\_T \approx F\_L = \frac{1}{2} \mathbb{Q} C\_L \text{Sv}\_k^2 \tag{13}$$
 
 [Equation 12](#page-128-0) shows a sensitivity to kite speed, so to find the optimal speed we take the derivative of power with respect to , set the derivative to zero, and solve to find the optimal kite speed, _v<sup>k</sup>_ which we'll denote by adding the subscript to indicate this as the Loyd optimum operating _L_ point:
 
-<span id="page-129-1"></span>
+
 $$\mathbf{v}\_{k\_L} = \frac{2}{3} \frac{\mathbf{C}\_L}{\mathbf{C}\_D} \mathbf{v}\_{\mathbf{w}} \tag{14}$$
 
 We'll see later that the wind speed used to determine the best kite speed needs to be adjusted to accommodate various effects, but we'll leave it as a generic for now. We can then _v<sup>w</sup>_ substitute this back into [equation 12](#page-128-0) to find:
 
-<span id="page-129-0"></span>
+
 $$P = \begin{array}{c} \frac{4}{27} \frac{C\_L}{C\_D} \frac{1}{2} \text{g} \text{S} \text{v}\_w \text{}^3 \\\\ \end{array} \tag{15}$$
 
 Comparing [equations 10](#page-127-1) and [15](#page-129-0) , we see that we've found a theoretical limit for at a given ζ _C<sup>L</sup>_ and . We'll call this maximum the Loyd limit: _C<sup>D</sup>_ ζ*<sup>L</sup>*
@@ -479,7 +425,7 @@ Let's also introduce a baseline for a wing operating optimally, , where the subs
 
 represents excess thrust power, not an electrical power. This thrust power can then go to the power system if we wish—for an onboard generation system, via rotor drag power that is then converted to electrical power—or into accelerating the kite.
 
-<span id="page-130-1"></span>
+
 
 $$
 P\_0 = \frac{1}{2} \varrho S \mathfrak{T}\_0 \nu\_{\
@@ -488,12 +434,12 @@ $$
 
 We'll be using this baseline power as the foundation to build our model on. Before moving on, let's look at how the tension of an optimally operated AWT compares with the theoretical minimum force for a given power at a given speed, in this case simply defined as . _F<sup>T</sup> min_ = _<sup>P</sup> vw_ Taking our optimal kite speed from [equation 14](#page-129-1) and plugging it into [equation 13](#page-129-2) to find the _v<sup>k</sup><sup>L</sup>_ tension at the optimal kite speed, , we find that the tension ratio at the Loyd limit, , is: _F<sup>T</sup><sup>L</sup>_ τ _L_
 
-<span id="page-130-2"></span>
+
 $$\mathfrak{T}\_L = \frac{F\_{T\_L}}{F\_{T\_{\min}}} = \frac{F\_{T\_L} v\_w}{P} = \mathfrak{Z} \tag{18}$$
 
 The loading efficiency of an AWT at maximum performance is independent of the system itself! We'll compare this to the analogous tower loading efficiency of a HAWT in a later section.
 
-#### <span id="page-130-0"></span>6.1.1 Tether Drag Losses
+#### 6.1.1 Tether Drag Losses
 
 Defining a is only useful to provide a comparison point to come back to. For AWTs, the ζ<sup>0</sup> _C<sup>D</sup>_ must include the drag of the tether, not just the wing. By again assuming and modeling _<sup>v</sup> <sup>k</sup>_ <sup>≫</sup> _<sup>v</sup><sup>w</sup>_ the tether as a rigid bar with constant drag properties, we can find an effective tether drag _C<sup>D</sup>t_,_eff_ as a drag coefficient referenced to the kite wing area, , and kite airspeed to be: _S_
 
@@ -531,7 +477,7 @@ We can then define a power coefficient for tether drag, , as the ratio of . For 
 
 $$C\_{TD} = \frac{\xi\_L}{\xi\_0} = \frac{1}{\left(1 + \frac{1}{4}k\_{TDR}l\_l\right)^2} \tag{22}$$
 
-#### <span id="page-132-0"></span>6.1.2 Path Offset Losses
+#### 6.1.2 Path Offset Losses
 
 It's important to consider the mechanism by which both HAWTs and AWTs generate their power from wind. All wind turbines work by redirecting and slowing down the incoming wind to generate a propulsive lift, in the process extracting the kinetic energy available in the wind. By definition, tethers of AWTs only support a tensile load, which means that for a kite in crosswind flight, the total aerodynamic forces on average must be in line with the tether, and the wing can only create forces to extract energy from the portion of wind aligned with the tether.
 
@@ -543,7 +489,7 @@ This important relationship is worth confirming with the numerical model. A kite
 
 The power attenuation shown in figure 13 is independent of system performance. We've only shown the effect of path elevation here, but the same power attenuation occurs for any angular offset from the wind. We'll revisit this effect in the context of azimuth offsets later.
 
-![](_page_133_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_133_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 13 : Numerical model verification of the critical cos <sup>3</sup>angular offset losses.**
 
@@ -553,18 +499,18 @@ $$\nu\_{\nu\_{\rm eff}} = \nu\_{\nu\_{\rm vh}} \cos \Theta\_{\rm e} \tag{24}$$
 
 For an AWT, minimum average tether elevation for a circular path is dictated by mean path radius , tower height , and desired ground clearance (ie, minimum altitude) : _rloop htower hmin_
 
-<span id="page-133-0"></span>
+
 $$\Theta\_{e\_{\min}} = \sin^{-1}\left(\frac{r\_{loop}}{l\_t}\right) + \sin^{-1}\left(\frac{h\_{\min} - h\_{\text{lower}}}{l\_t}\right) \tag{25}$$
 
 Using approximate values from the Makani M600 with a wingspan of 25 m, a tether of 440 m, and a short tower of 5 m, then choosing a relatively tight turning radius of 5 wingspans (125 m
 
 radius) with a ground clearance at the bottom of the loop of ~3.5 wingspans (90 m), we have a minimum elevation angle of 0.48 rad (~28 deg), and of this angle is 0.7. The minimum cos<sup>3</sup> elevation loss in this example is nearly one third of the power!
 
-#### <span id="page-134-0"></span>6.1.3 Wind Shear Gains
+#### 6.1.3 Wind Shear Gains
 
 Wind in our altitudes of interest (~50 m to 300 m) typically follows a simple shear model, such that:
 
-<span id="page-134-1"></span>
+
 $$\nu\_{\nu\_{\rm vh}} = \nu\_{\nu\_{\rm ref}} \left( \frac{h\_{\rm vh}}{h\_{\rm ref}} \right)^{a\_{\rm w}} \tag{26}$$
 
 Where is wind speed at the virtual hub height (the mean path height), , while is the _v<sup>w</sup>vh hvh v<sup>w</sup>ref_ wind speed measured at some reference height, , and is the wind shear exponent. _href_ α*<sup>w</sup>*
@@ -585,18 +531,18 @@ The first part is the cost of higher elevations, while the second is the benefit
 
 Setting the derivative of this to zero and solving to find the for maximum performance gives θ*<sup>e</sup>* us:
 
-<span id="page-135-1"></span>
+
 $$\Theta\_{e\_{ideal}} = \tan^{-1} \sqrt{\mathbf{\alpha}\_w} \tag{30}$$
 
 The ideal mean tether elevation accounting for the effects of elevation losses and wind shear benefits appears to be independent of tether length, system performance, or anything other than wind shear! For typical onshore shears of <sup>α</sup> 1 7 .143 , this evaluates to 0.36 rad (21 deg), _<sup>w</sup>_ = / <sup>≈</sup> <sup>0</sup> and for typical offshore wind shears of , ideal elevation is 0.31 rad (18 deg). Both are _<sup>w</sup>_ = 0.1 α lower than the minimum elevation we derived above! Best operation of an AWT is typically as low as feasible, even in normal wind shear conditions.
 
-![](_page_135_Picture_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_135_Picture_4.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 14 : Makani employee and world champion kitesurf racer Johnny Heineken (white kite) keeping his kite low to reduce elevation losses.**
 
 While AWTs are indeed accessing higher winds (typical tether lengths place the virtual hub height higher than most HAWT hub heights), it is generally advantageous to fly as low as possible, which means tighter turning radii and less ground clearance.
 
-#### <span id="page-135-0"></span>6.1.4 Turning Losses
+#### 6.1.4 Turning Losses
 
 Not all lift produced by the kite can go towards power production. In practice, some portion of lift is used to make the turn and keep the kite and tether airborne. Here we'll look specifically at the turning losses.
 
@@ -604,13 +550,13 @@ A free body diagram in the frame of a kite turning a circular path directly down
 
 plane spanned by the centrifugal and tension forces, making all forces planar. This frame is non-inertial, so we add a centrifugal force, , that must also be balanced. _F<sup>c</sup>_
 
-![](_page_136_Figure_3.jpeg)
+<div><img src="/assets/images/makani_paper/page_136_Figure_3.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 15 : Forces on the kite in the approximate lift and tension plane. Here, the path center is directly downwind, and the kite is flying towards the viewer.**
 
 We propose that only the lift in the plane contributes to power production. With our _Span_(_<sup>v</sup>_ , ) _<sup>k</sup>_ → _v<sup>w</sup>_ → small angle approximations we can restate the sensitivity as being in relation to the cos<sup>3</sup> θ angle of the lift instead of simply the tether elevation angle, . In the absence of in _offwind_ θ*<sup>e</sup> F<sup>c</sup>* straight and level flight, they are identical. This proposed behavior is worth confirming via the numerical model. In this case, we place the path loop axis directly downwind in the absence of gravity, and vary to achieve differing . Again, we optimize for airspeed under each _rloop_ θ*offwind* condition.
 
-![](_page_137_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_137_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 16 : Numerical model confirmation of the proposed cos <sup>3</sup>θ offwind losses**
 
@@ -620,7 +566,7 @@ This benefit doesn't come for free, as it results in higher system loads. Tensio
 
 <sup>14</sup> Assuming operation at optimum speed for a system operating far from the Betz limit.
 
-![](_page_138_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_138_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 17 : Tension factor, τ, changes as we vary r loop and the tether carries different amounts of the required centripetal force.**
 
@@ -648,7 +594,7 @@ We introduce here the effective mass for acceleration, . Derived from a rigid te
 
 By combining the equations above, adding the approximations that , that is small, _F<sup>T</sup>_ ≈ _F<sup>L</sup> F<sup>Y</sup>_ that , and assuming a circular path so that , we can then set to its _v<sup>a</sup>_ ≈ _v<sup>k</sup> rcurv_ = _rloop_ θ*offwind* optimum of zero and solve for to find the following relationship for the ideal circular path _rloop_ size to minimize turning losses, : _rloopideal_
 
-<span id="page-139-0"></span>
+
 $$r\_{loop\_{ideal}} = \sqrt{\frac{2l\_l m\_{eff}}{\varrho C\_L S}}\tag{37}$$
 
 This is an interesting result. As both the tension and centrifugal force approximately scale together with , they drop out, and the ideal radius of curvature becomes only a function of a _v<sup>k</sup>_ 2 few kite parameters, largely independent of any kite speed strategy or wind.
@@ -665,7 +611,7 @@ $$C\_{trm} = \left(1 - \left(\frac{2m\_{eff}}{\wp C\_L S r\_{loop}} - \frac{r\_{
 
 We can check the accuracy of all these approximations by again using the same example from the numerical model as we used to show the losses, and comparing results with the θ*offwind* analytical model for in figure 18 : _Cturn_
 
-![](_page_140_Figure_5.jpeg)
+<div><img src="/assets/images/makani_paper/page_140_Figure_5.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 18 : Numerical confirmation of our analytical turning losses for a directly downwind circular path. The analytical model, despite much simplification, is a good fit.**
 
@@ -675,7 +621,7 @@ For a path not directly downwind, from turning is combined with from path elevat
 
 comes from turning, but we now have the kite moving into and out of the wind. Despite these <sup>15</sup> nuances, numerical models have shown this factor derived from a path directly θcos 3 _offwind_ downwind to be a decent approximation for turning losses at typical path offsets.
 
-#### <span id="page-141-0"></span>6.1.5 Efficiency Losses
+#### 6.1.5 Efficiency Losses
 
 Thus far we've been working with thrust power, a force on the rotors at an airspeed. The power system's job is to convert that thrust power from the wind into a useful electrical power.
 
@@ -707,7 +653,7 @@ $$C\_{\eta} = \eta\_{t2g} \tag{47}$$
 
 Pumping kites with ground based power generation will result in similar values, replacing the η with pumping cycle losses and removing the losses. _rotors tether_ η
 
-#### <span id="page-142-0"></span>6.1.6 Gravity Losses
+#### 6.1.6 Gravity Losses
 
 [Equation 17](#page-130-1) for assumes the kite is operating at its ideal kite speed, which is roughly _P_<sup>0</sup> constant around the path (approximately: _<sup>v</sup>_ ) ). In order to do this, the kite _<sup>k</sup><sup>L</sup>_ <sup>∝</sup> cos (θ*offwind* + θ*<sup>e</sup>* must hold a constant kite speed while experiencing large changes in potential energy due to the changes in path height. This strategy causes large swings in power as the potential energy is effectively pushed into the grid on the downstroke, and pulled back out on the upstroke. A constant kite speed strategy creates fluctuations in power with changes in altitude.
 
@@ -721,7 +667,7 @@ $$
 
 Defining as the losses of our "grid battery" relative to the potential energy exchange, , _pump_ η 0 _E<sup>P</sup>_ Δ under conditions of no wind, we find:
 
-<span id="page-142-1"></span>
+
 
 $$
 \eta\_{pump\_0} = \frac{\eta\_{\Omega g} \Delta E\_P - \frac{\Delta E\_P}{\eta\_{\Omega g}}}{\Delta E\_p} = \eta\_{t2g} \ - \ \frac{1}{\eta\_{\Omega g}} \tag{43}
@@ -743,7 +689,7 @@ It's important to note that we've baked in the tether losses here by using rathe
 
 It's worth taking a look at this term to describe the losses we anticipate. Taking the MX2 kite at an elevation angle of 0.45 rad (26 deg), in figure 19 we plot this as we change kite inertial ζ*<sup>v</sup>* speed at different wind speeds.
 
-![](_page_144_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_144_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 19 : Kite performance metric v versus kite inertial speed at various wind speeds. For a fixed C L and C D , optimum speed increases linearly with wind speed.**
 
@@ -759,7 +705,7 @@ If we chose a strategy such that the average kite speed, , is the optimum speed 
 
 convenience), and update our optimum speed to include the effective wind speed, we have _v<sup>k</sup><sup>L</sup>_ [equation 46 :](#page-145-0)
 
-<span id="page-145-0"></span>
+
 $$\mathbf{v}\_k = \mathbf{v}\_{k\_L} = \frac{2}{3} \frac{\mathbf{C}\_L}{\mathbf{C}\_D} \mathbf{v}\_{\mathbf{w}\_{\text{eff}}} \tag{46}$$
 
 To capture the speed change around a circular path, we define a loop angle, , to start at zero ψ at the top of the path and increase moving in the direction of kite motion—this is clockwise for Makani systems when viewed looking downwind. Making the simplification that an average <sup>18</sup> kite speed, , is the average with respect to loop angle rather than to time, we can alternatively *v*ˉ*<sup>k</sup>* define as: *v*ˉ*<sup>k</sup>*
@@ -782,7 +728,7 @@ $$
 
 The relationship between loop angle and kite speed for a constant fraction is nearly _kgrav_ sinusoidal in shape. We'll make the simplifying approximation that it is, giving us:
 
-<span id="page-145-1"></span>
+
 
 $$
 \Delta \nu\_{k\_{\Psi}} \approx \overline{\nu}\_k - \frac{1}{2} \Delta \nu\_k \cos \psi \tag{50}
@@ -806,7 +752,7 @@ $$\mathcal{C}\_{v\_k} = \frac{\xi\_v}{\xi\_0 C\_{TD}} \tag{52}$$
 
 This definition is somewhat duplicative, requiring us to pull out after baking it in, but _CT D_ accomplishes the goal of isolating our power coefficients. Before attempting to combine the effect of pumping losses and a varying speed strategy, let's investigate this new term. Unlike other power coefficients derived above, this one has a sensitivity to wind speed. In figure 20 , plotting for different wind speeds and fractions for a kite with a loop radius of 80 m _C<sup>v</sup><sup>k</sup> kgrav_ and elevation angle of 0.45 rad results in:
 
-![](_page_146_Figure_6.jpeg)
+<div><img src="/assets/images/makani_paper/page_146_Figure_6.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 20 : Change in power coefficient C vk as a function of speed strategy k grav . Low winds are highly sensitive to speed, and a varying strategy pays a large performance penalty.**
 
@@ -820,7 +766,7 @@ $$P\_{grav, \psi} = m\_{eff, g} g (1 - k\_{grav}) \,\bar{\upsilon}\_k \sin \psi 
 
 For the no wind case, this is the only power. Let's plot it below for the MX2 kite at a of 40 *v*ˉ*<sup>k</sup>* m/s, an elevation angle of 0.45 rad (26 deg), and a of 0.5. We'll also plot the electrical _kgrav_ power this results in. Since power changes sign, the definition of efficiency flips and we must multiply by for positive power (generating) and divide by for negative (consuming) *t*2*<sup>g</sup>* η *<sup>t</sup>*2*<sup>g</sup>* η power, resulting in:
 
-![](_page_147_Figure_6.jpeg)
+<div><img src="/assets/images/makani_paper/page_147_Figure_6.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 21 : Power vs loop angle, demonstrating the large swings in power resulting from the potential energy exchange at a k grav of 0.5. Efficiency losses then mean the stored energy (green) is less than the consumed energy (red).**
 
@@ -868,9 +814,9 @@ As other losses build and gets smaller, forms a larger part of the geometric pow
 
 Let's investigate the product of these two power coefficients in isolation (ie, is just ) _Cother C<sup>v</sup><sup>k</sup>_ for various fractions and wind speeds. For the MX2 kite flying with an 80 m path radius at _kgrav_ an elevation angle of 0.45 rad with an of -0.85 under no wind shear, we have figure 22 . _pump_ η 0
 
-![](_page_150_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_150_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-![](_page_150_Figure_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_150_Figure_4.jpeg" class="img-fluid" alt=""></div>
 
 The end result is heavily detrimental to low wind speeds, and there is now no escaping it via low _kgrav_ fractions. Kinks visible in the solution are where saturates at 1 as _Cpump PP_ and pumping losses go to zero. Adding in additional losses ignored here _thrust_ > _pump_, _max_ increases the sensitivity to pumping losses, as becomes more dominant when total _Cpump_ power is lower. This can shift the optimum to higher fractions. _kgrav_
 
@@ -880,7 +826,7 @@ The simplifications here still allow us to highlight the important lessons: mode
 
 improve performance is to turn _very_ tight paths to reduce in order to reduce non-optimal _v<sup>k</sup>_ Δ speed losses with higher fractions that reduce pumping losses. _kgrav_
 
-#### <span id="page-151-0"></span>6.1.7 Minimum Airspeed Losses
+#### 6.1.7 Minimum Airspeed Losses
 
 There is a minimum airspeed requirement for AWTs—the kite must at least be able to lift the mass of the kite and tether. This is often overshadowed by a minimum _controllable_ airspeed, dependent on the desired control authority and size of the control surfaces.
 
@@ -898,7 +844,7 @@ $$\mathbf{v}\_{k}^{\tau} = \frac{1}{2} \left( \sqrt{\mathbf{v}\_{a\_{\text{min}}
 
 This is then substituted in place of where the condition is met. *v*ˉ*<sup>k</sup> vkL*
 
-#### <span id="page-151-1"></span>6.1.8 Tension Limiting Losses
+#### 6.1.8 Tension Limiting Losses
 
 Structural loads and therefore mass of both the kite and tether scale strongly with tension, so a small drop in may be justified if it carries a large drop in tension, enabling a larger kite such ζ that the product is larger. _S_ ζ
 
@@ -930,7 +876,7 @@ To do so we normalize by our baseline power, . Again, we need to back out any du
 
 $$C\_{Tmax} = \min\left(\frac{F\_{Tmax}\left(v\_{w\_{eff}} - \frac{2}{3}v\_{w\_{eff,Tmax}}\right)}{P\_0 C\_{\theta\_\ell} C\_{a\_\mathbb{W}} C\_{TD}}, 1\right) \tag{66}$$
 
-#### <span id="page-153-0"></span>6.1.9 Putting It Together
+#### 6.1.9 Putting It Together
 
 At last we can piece together our power coefficients to define a total mean power for an AWT with all losses, referenced to : _P_<sup>0</sup>
 
@@ -952,7 +898,7 @@ $$\Theta\_{e\_{\text{best}}} = \max \left( \Theta\_{e\_{\text{min}}} \, \right. 
 
 As a brief aside, we need to address that the solution for assumes zero tower height. If we θ*<sup>e</sup>ideal* revisit the derivation and include terms for tower height, an algebraically messy solution for best θ*e* can be found (not shown here, as things are already messy enough). The difference _ideal_ between the more accurate solution and the simplified form above is most pronounced at short tether lengths, high shear, and tall towers, so we compare the solutions at a short tether length of 300 m and relatively high shear of 0.2 to find:
 
-![](_page_154_Figure_5.jpeg)
+<div><img src="/assets/images/makani_paper/page_154_Figure_5.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 23 : Comparing the simple analytical solution for θ e, best in the context of maximum elevation and shear power coefficients. The simpler solution, even perturbed far from the zero tower height case it was derived, performs well enough.**
 
@@ -960,7 +906,7 @@ Even under these pessimistic conditions, the difference between the simplistic s
 
 We now optimize and for various tether lengths under zero wind shear conditions _kgrav rloop_ 23 and a standard sea level air density of 1.225 kg/m <sup>3</sup>, and for reasons that will soon be clear, begin the discussion by showing for the resulting optimized solutions: _rloop_
 
-![](_page_155_Figure_3.jpeg)
+<div><img src="/assets/images/makani_paper/page_155_Figure_3.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 24 : Numerical optimization results for r loop versus wind speed for the MX2 system using our analytical model.**
 
@@ -976,7 +922,7 @@ A path radius this tight is simply not particularly feasible, at least not for h
 
 For now, we'll simply constrain our path radius for the MX2 system to a more reasonable but <sup>24</sup> still tight minimum of 80 m and repeat the exercise (resulting in most cases riding this _rloop_ minimum turning limit), this time plotting in figure 25 what we're really interested in, the power curves:
 
-![](_page_156_Figure_5.jpeg)
+<div><img src="/assets/images/makani_paper/page_156_Figure_5.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 25 : Power curves from the analytical model, numerically optimized over r loop (with a minimum of 80 m) and k grav for the MX2 system. Curves are not yet clipped at rated power.**
 
@@ -986,7 +932,7 @@ Keep in mind we haven't yet clipped the power at the power system's max capabili
 
 losses from meeting the minimum altitude constraint dominate. Too long, and the tether drag reduces performance.
 
-![](_page_157_Figure_3.jpeg)
+<div><img src="/assets/images/makani_paper/page_157_Figure_3.jpeg" class="img-fluid" alt=""></div>
 
 We can also see, in figure 26 , how the total power coefficient changes with wind speed:
 
@@ -996,7 +942,7 @@ At best, our AWT is able to capture ~30% of the idealized power. The (which incl
 
 Inspecting the breakdown of the various coefficients for our optimal 300 m tether case finds the following in figure 27 .
 
-![](_page_158_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_158_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 27 : Individual power coefficients referenced to P 0 for our optimized analytical model for the MX2.**
 
@@ -1004,7 +950,7 @@ The majority of the losses are captured with three constant and comparable losse
 
 What about higher wind shears? Repeating the exercise again, but for a "standard" wind shear of <sup>1</sup> 7 .143 and a reference wind height of 80 m results in figure 28 . / <sup>≈</sup> <sup>0</sup>
 
-![](_page_159_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_159_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 28 : Optimized analytical model power estimates for the MX2, comparing "normal" wind shear of 1/7 (solid lines) vs no wind shear (dashed lines) at various tether lengths.**
 
@@ -1012,17 +958,17 @@ As AWTs have higher virtual hub heights than typical HAWT hub heights, they see 
 
 Finally, we'll compare these results with the results from the more detailed numerical model. A deeper dive into the numerical model results is shown in the [power saturation section](#page-195-0) and in the provided code tools, but here we'll just jump straight to the result. Updating the analytical model to a 90 m path radius to match the increased conservatism applied in the numerical model and using a of 0.7 to roughly match the speed strategy from the other model results in the _kgrav_ comparison in figure 29 under zero wind shear at sea level conditions.
 
-![](_page_160_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_160_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 29 : Comparison of optimized analytical model result for the MX2 versus optimized numerical model. The analytical model fares well until power and tension constraints become significant.**
+##### **Figure 29 : Comparison of optimized analytical model result for the MX2 versus optimized numerical model. The analytical model fares well until power and tension constraints become significant.**
 
 The analytical model has done well at capturing the major loss factors and the trades between them. We see a slow roll-off in performance as the kite begins to blend in power saturation strategies in the numerical model, rather than a sharp cutoff—again, we'll investigate power saturation further in [section 10](#page-195-0) [a later section](#page-227-0) .
 
 There's much to glean from the models we've just created. Let's see what we can learn, and how those lessons can apply to different kite designs.
 
-## <span id="page-160-0"></span>6.2 Lessons from Loyd Revisited
+## 6.2 Lessons from Loyd Revisited
 
-### <span id="page-160-1"></span>6.2.1 Minimum Turning Radius Constraints
+### 6.2.1 Minimum Turning Radius Constraints
 
 Our analytical model shows a strong preference for small path sizes, but there are both hard and practical constraints on minimum path size.
 
@@ -1036,7 +982,7 @@ When we solved for before, we were just looking for the mean effect. For roll li
 
 Solving for the force balance in the crosswind plane, perpendicular to the flight path axis, we have:
 
-<span id="page-161-0"></span>
+
 
 $$
 \Sigma F\_{\perp} = F\_{L\_{\perp}} + F\_{T\_{\perp}} + F\_{c\_{\perp}} + F\_{w\_{\perp}} + F\_{Y\_{\perp}} = \mathbf{0} \tag{70}
@@ -1056,17 +1002,17 @@ This allows us to avoid using the assumption we've used extensively until now, a
 
 Expanding [equation 70](#page-161-0) above results in [equation 74](#page-162-0) .
 
-<span id="page-162-0"></span>
+
 $$\sum F\_{\perp} = 0 = \frac{m\_{\text{eff}} v\_k^2}{r\_{\text{core}}} - \frac{r\_{\text{loop}}}{l\_l} F\_L \frac{\cos(\varphi - \gamma)}{\cos \varphi} + F\_L \sin(\varphi - \gamma) \ + F\_Y \cos(\varphi - \gamma) - m\_{\text{eff}, \varphi} g \cos \theta\_\varepsilon \cos \psi \qquad \left[\BigDelta\_l \mathbf{4}\right] \ \left[\varphi - \varphi\_l \cos(\varphi - \gamma)\right] \ \left[\varphi - \varphi\_l \cos(\varphi - \gamma)\right] \ \left[\varphi\_l \cos(\varphi - \gamma)\right] \ \left[\varphi - \varphi\_l \cos(\varphi - \gamma)\right] \ \left[\varphi\_l \cos(\varphi - \gamma)\right] \ \left[\varphi\_l \cos(\varphi - \gamma)\right] \ \left[\varphi\_l \cos(\varphi - \gamma)\right] \ \left[\varphi\_l \cos(\varphi - \gamma)\right] \ \left[\varphi\_l \cos(\varphi - \gamma)\right] \ \left[\varphi\_l \cos(\varphi - \gamma)\right]$$
 
 We can break out the reading glasses to see how this lengthy, shrunken equation can be numerically solved for tether roll angle if we wish, but it's desirable to have a simpler, shorter analytical solution, so some substitutions are in order. Assuming the kite is operating close to the ideal turning radius derived above, cos(ϕ γ) ≈ 1 ( and sin ϕ γ) ≈ (ϕ γ) . These changes allow us to directly solve for tether roll angle .γ 25
 
-<span id="page-162-1"></span>
+
 $$\gamma = \frac{m\_{\it eff} v\_k^2}{F\_L r\_{\it curv}} - \frac{r\_{\it loop}}{l\_t \cos \varphi} + \Psi + \frac{F\_Y}{F\_L} - \frac{m\_{\it eff,g} g \cos \theta\_\epsilon \cos \psi}{F\_L} \tag{75}$$
 
 Now that we have a model, let's investigate. We begin with a constant kite speed strategy with _kgrav_ of zero to isolate the effects of gravity and the difference between kite inertial speed and airspeed. We take our MX2 system operating at its best achievable zeta lift ( = 1.81, = 0), _C<sup>L</sup> C<sup>Y</sup>_ with a path radius of 80 m at an elevation angle of 0.45 rad at a reference wind speed of 8 m/s and no shear, and in order to isolate effects, model the tether roll angle both with and without gravity. Here, we assume the instantaneous radius of curvature, is equal to the mean path _rcurv_ radius, , and use a simple constant kite speed strategy with a of zero: _rloop kgrav_
 
-![](_page_162_Figure_7.jpeg)
+<div><img src="/assets/images/makani_paper/page_162_Figure_7.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 30 : Tether roll angle versus loop angle at 8 m/s of wind at a path radius of 80 m and elevation angle of 0.45 rad, both with and without gravity to isolate its effect.**
 
@@ -1076,7 +1022,7 @@ The curve without gravity is purely a result of the elevation angle that causes 
 
 Let's look, in figure 31 , at the limits of the tether roll angle versus wind speed for various _kgrav_ speed strategies, using the model from [equation 50](#page-145-1) for speed as a function of loop angle, , _v<sup>k</sup>_<sup>ψ</sup> assuming is the optimal speed and again using our example MX2 kite and path setup as *v*ˉ*<sup>k</sup> vkL* above:
 
-![](_page_163_Figure_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_163_Figure_4.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 31 : Tether roll angle versus wind speed for various k grav strategies. We've assumed the kite is operating centered around its optimal kite speed, effectively showing that as the kite speeds increase with wind speed, the required tether roll range decreases.**
 
@@ -1086,9 +1032,9 @@ We can now explore the limits of this kite. The MX2 hits physical limits at roll
 
 To find this, we return to the sum of the forces perpendicular to the path axis and solve for instantaneous curvature, at the tether roll limit, again taking our path setup from above. We _rcurv_ find a weak sensitivity to the strategy, but a strong one to both wind speed (largely _kgrav_ because in our kite speed is a linear function of wind speed) and lift coefficient, so varying those while is fixed at 0.75 and finding the worst case turning radius around the loop at our _kgrav_ maximum roll results in figure 32 :
 
-![](_page_164_Figure_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_164_Figure_4.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 32 : Minimum instantaneous turning radius versus coefficient of lift at a constant path radius of 80 m. The difference between the path radius and the minimum instantaneous radius is the turning margin.**
+##### **Figure 32 : Minimum instantaneous turning radius versus coefficient of lift at a constant path radius of 80 m. The difference between the path radius and the minimum instantaneous radius is the turning margin.**
 
 We find that the MX2 flying prescribed 80 m radius circular paths at the target of 1.81 is _C<sup>L</sup>_ surprisingly close to its minimum turning radius at the worst part of the path, pointed nearly directly at the ground. An alpha control error of just a few degrees can leave the kite with little excess turning capability for path correction.
 
@@ -1098,13 +1044,13 @@ path where the kite is moving both downwind and at the ground. The limits shown 
 
 Before moving on, there are several assumptions we've baked in that should be reviewed. We've thus far assumed circular or close to circular paths. Horizontally oriented figure eight paths with downstrokes on the cross can alleviate at least the combination of simultaneously moving downwind and pointed steeply at the ground. Moving the sides of the path further out by either ovalizing the path or flying horizontal figure eights can get additional turning assistance from the tension, but wider paths also increase the required tether roll angle, so the net effect is typically a small increase in turning margin for increased power losses. With shorter tether systems, these minimum turning radius constraints require figure eight paths to cover a wide span of azimuth, and these power losses can be substantial. A system designed to fly these paths needs to be designed around a longer tether.
 
-### <span id="page-165-0"></span>6.2.2 The Push for Tighter Loops
+### 6.2.2 The Push for Tighter Loops
 
 Small path radii are clearly beneficial in reducing gravity losses, but for this section we'll remove those losses and just look at losses directly dependent on that are independent of wind _rloop_ speed.
 
 Taking the values for our MX2 system as defined in table 4 , we use our model to create this non-generalized result for _<sup>C</sup> C C_ as a function of path radius and tether length, in figure <sup>θ</sup>_<sup>e</sup> turn_ α*<sup>w</sup>* 33 .
 
-![](_page_166_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_166_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 33 : Contours of combined power coefficients representing the effects of elevation losses, turning losses, and wind shear gains for different path radii and tether lengths, under conditions of both no shear (blue lines) and shear of 1/7th (red lines). Optimal path radii curves are highlighted.**
 
@@ -1118,7 +1064,7 @@ An alternative approach to ever tighter loops is to increase the tower height. T
 
 There's a similar sensitivity to changing tower height or minimum altitude. We find that the <sup>27</sup> change in power is approximately linear for changes of approximately +/- 30 m in the above example, so pulling out the mean sensitivity for different tether lengths for a system with a minimum altitude of 80 m, a higher than normal tower height of 30 m, and a path radius of 80 m under conditions of zero wind shear gives us figure 34 .
 
-![](_page_167_Figure_5.jpeg)
+<div><img src="/assets/images/makani_paper/page_167_Figure_5.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 34 : Sensitivity of a subset of power coefficients to changing tower height (or minimum altitude) versus tether length.**
 
@@ -1128,7 +1074,7 @@ This system sees ~ 0.28% change per meter of tower, making an 11 m increase in t
 
 <sup>27</sup> Identical for zero shear conditions.
 
-### <span id="page-168-0"></span>6.2.3 Higher Power from Stronger Winds at Altitude?
+### 6.2.3 Higher Power from Stronger Winds at Altitude?
 
 The increased performance by accessing higher, stronger winds at higher altitudes makes a seemingly strong case for AWTs, and this is amplified when looking at a _<sup>C</sup> C C_ subset of <sup>θ</sup>_<sup>e</sup> turn_ α*<sup>w</sup>* power coefficients we plotted above in figure 33 —despite elevation and turning losses, long tethers in moderate shear can give power up to 1.5 times ! _P_<sup>0</sup>
 
@@ -1136,9 +1082,9 @@ This effect wasn't present in the initial summary, where longer tethers at high 
 
 With this model, we revisit the sweep from before, but this time rather than showing all , _rloop_ we'll solve for the optimum for each tether length, resulting in the best total coefficient for a given tether length, in figure 35 .
 
-![](_page_168_Figure_6.jpeg)
+<div><img src="/assets/images/makani_paper/page_168_Figure_6.jpeg" class="img-fluid" alt=""></div>
 
-<span id="page-168-1"></span>**Figure 35 : Best possible (via optimized r loop ) power coefficients representing tether drag, elevation, and turning losses with shear gains versus tether length. Various tether drag ratios, k TDR , are shown, under conditions of shear (solid lines) and no shear (dashed lines).**
+**Figure 35 : Best possible (via optimized r loop ) power coefficients representing tether drag, elevation, and turning losses with shear gains versus tether length. Various tether drag ratios, k TDR , are shown, under conditions of shear (solid lines) and no shear (dashed lines).**
 
 There are some key takeaways from [this plot](#page-168-1) :
 
@@ -1152,7 +1098,7 @@ Figure 35 also effectively states that _the tether is almost always unsuccessful
 
 This conclusion is fairly robust, requiring either very low or very _k_ low minimum altitudes _T DR_ and high shear to see this combination of power coefficients become greater than 1 at reasonable tether lengths. Using a high wind shear with an of 0.2, cutting our to 40 m, α*<sup>w</sup> hmin* and keeping our of 15 m sees this combination of coefficients become greater than 1 for _htower_ tether lengths greater than 500 m. This is indeed aggressive—the minimum altitude places our kite < 2 wingspans from the ground at the lowest point! Alternatively, using the original values for shear and minimum height requires a of approximately 0.0075, half the minimum value _kT DR_ in the prior plot and less than half the low end values for unfaired tethers in table 3 , to achieve a similar effect. A so low likely requires either a faired tether, or a large draggy low _kT DR_ performance per wing area kite, which means our high power coefficient is based on a low base of power. Tether drag dictates optimal tether length, which itself dictates a lot of design parameters.
 
-#### <span id="page-169-0"></span>6.2.4 Comparing AWT with HAWT Power Production
+#### 6.2.4 Comparing AWT with HAWT Power Production
 
 What if we compare the same wing, but affixed to a hub on a tower instead of freely flying around on a tether? We've effectively described a traditional wind turbine, as the blades of a HAWT create power from the wind in the same manner as the wing of our kite. This wing-mounted-to-a-tower will represent our comparison HAWT.
 
@@ -1162,17 +1108,17 @@ For our example tetherless kite, ie, a HAWT with a single blade, the distance fr
 
 We apply actuator disc theory to the swept area to account for the induced flow losses. The actuator disc model finds that the wind speed at the disc (where we sweep out the wind area) is the average of the upstream, , and downstream, , velocities. We'll use to denote the _v<sup>w</sup>vh v<sup>w</sup><sup>d</sup> v<sup>w</sup>vh_,_<sup>i</sup>_ wind speed at the kite after accounting for induced flow.
 
-<span id="page-170-1"></span>
+
 $$\boldsymbol{\nu}\_{\boldsymbol{w}\_{\boldsymbol{w}\_{\boldsymbol{h},\boldsymbol{l}}}} = \frac{1}{2} \left( \boldsymbol{\nu}\_{\boldsymbol{w}\_{\boldsymbol{v}\_{\boldsymbol{h}}}} + \boldsymbol{\nu}\_{\boldsymbol{w}\_{\boldsymbol{d}}} \right) \tag{76}$$
 
 The continuity equation for the actuator disc gives us an alternative equation for power extracted from the wind:
 
-<span id="page-170-2"></span>
+
 $$P = \frac{1}{2} \mathbb{Q} A\_{sweight} \mathbb{v}\_{\mathbb{W}\_{\text{vh}j}} \left( \mathbb{v}\_{\mathbb{W}\_{\text{vh}}}{}^2 - \left. \mathbb{v}\_{\mathbb{W}\_d}{}^2 \right) \tag{77}$$
 
 Combining [equation 76](#page-170-1) with [equation 77](#page-170-2) gives us an alternative form for power:
 
-<span id="page-170-3"></span>
+
 $$P = \mathcal{Q}A\_{\mathcal{w}ept} \nu\_{\mathcal{w}\_{\text{v}hj}} \, ^2 \left( \nu\_{\mathcal{w}\_{\text{v}h}} - \nu\_{\mathcal{w}\_{\text{v}h,j}} \right) \tag{78}$$
 
 The swept area perpendicular to the wind, , of our kite is given by the area of the annulus _Aswept_ swept out by the wingspan, , and projected by the elevation angle: _b_
@@ -1181,12 +1127,12 @@ $$A\_{swept} = 2\pi \, b \, r\_{loop} \cos \Theta\_e \tag{79}$$
 
 The alternate power equation above is solving for a thrust power extracted from the wind, before any powertrain losses. The power from this equation must be equal to the thrust power using the methods above as well. We'll lump together terms that define a thrust power, such that:
 
-<span id="page-170-0"></span>
+
 $$P\_{\text{thrust}} = \frac{1}{2} \text{g}S\sharp\_0 C\_{\text{thrust}} \nu\_{w\_{\text{ref}}}{}^3 \tag{80}$$
 
 Here, we've lumped all the coefficients that attenuate thrust power together into , leaving _Cthrust_ out ones that are a function of the power system losses, defining it as:
 
-<span id="page-171-1"></span>
+
 $$\mathbf{C}\_{\text{thrust}} = \mathbf{C}\_{TD}\mathbf{C}\_{\theta\_e}\mathbf{C}\_{a\_\#}\mathbf{C}\_{\text{turn}}\mathbf{C}\_{v\_k}\mathbf{C}\_{T\max} \tag{81}$$
 
 To include the effect of the induced flow, we need to substitute for in [equation 80](#page-170-0) for _v<sup>w</sup>ref_,_<sup>i</sup> v<sup>w</sup>ref P_ , noting that the induced flow may not actually be changing the wind speed at the _thrust_ reference height—we're simply accounting for the fact that the reference point differs from virtual hub height. This additional complexity is simply to maintain our reference to . _P_<sup>0</sup>
@@ -1197,7 +1143,7 @@ $$\left(\nu\_{w\_{\rm ref}}\right)^3 = \frac{\nu\_{w\_{\rm wh}}}{C\_{a\_{\rm w}}
 
 We can then equate these power [equations 78](#page-170-3) and [80](#page-170-0) and solve for , and then use this _v<sup>w</sup>ref_,_<sup>i</sup>_ value to define a new power coefficient for induced losses, by referencing it to the uncorrected wind speed. This results in:
 
-<span id="page-171-0"></span>
+
 $$\mathbf{C}\_{j} = \left(\frac{\nu\_{w\_{ref}}}{\nu\_{w\_{ref}}}\right)^{3} = \left(\frac{4\mathcal{A}\_{\text{swept}}C\_{a\_{\text{w}}}}{4\mathcal{A}\_{\text{swept}}C\_{a\_{\text{w}}} + \mathcal{S}\xi\_{0}C\_{\text{thrust}}}\right)^{3} \tag{83}$$
 
 Inspecting [equation 83 ,](#page-171-0) we see that the higher performance we make our wing, the greater the <sup>28</sup> induced losses. A higher performance wing is accomplished by either increasing wing performance per wing area, , growing the wing area, , or reducing losses to increase . ζ<sup>0</sup> _S Cthrust_
@@ -1210,9 +1156,9 @@ We begin using this equation by checking the validity of neglecting the induced 
 
 system meets those criteria, we again use our simplified representation of it as our example kite. With a wind speed of 9 m/s and a constant fraction of 1 (at this high of a wind speed _kgrav_ and small path radius, makes little difference), we find the following: _kgrav_
 
-![](_page_172_Figure_3.jpeg)
+<div><img src="/assets/images/makani_paper/page_172_Figure_3.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 36 : Power coefficient representing the effect of induced losses on our MX2 versus path radius for various tether lengths. These losses are generally small for AWTs, even with the pessimistic (for AWTs) actuator disc model.**
+##### **Figure 36 : Power coefficient representing the effect of induced losses on our MX2 versus path radius for various tether lengths. These losses are generally small for AWTs, even with the pessimistic (for AWTs) actuator disc model.**
 
 For the selected system and tether lengths, induced flow losses max out at ~11% and are ~8% for a 300 m tether with 80 m radius paths. Overly tight loop sizes result in the kite's lift being used to make the turn rather than extract energy from the incoming wind, and induced losses top out and then diminish. There is now some motivation to turn larger loops than suggested above in [section 6.1.9](#page-153-0) , before induced flow losses are added, but at such a low solidity, this should just be considered an upper bound on induced losses. Even if directly applicable, this is assuming circular paths. AWTs can increase with minimal offwind or turning costs by _Aswept_ stretching the path horizontally into an oval, and/or by varying the path slightly from one loop to the next. For a kite, given that these losses are low even in the absence of these strategies, and given that the actuator disc model likely overpredicts AWT losses, we can state that induced flow losses for AWTs, even large high power kites turning small circles, is mostly irrelevant.
 
@@ -1230,7 +1176,7 @@ Let's begin by looking at just the induced losses. Most HAWTs have more than one
 
 Induced losses impose a limit on the maximum power a system can extract from a given wind flow, and this limit is called the Betz limit. With increasing , induced losses cause the system _S_ ζ to approach and hit this limit, so we also compare the power with the Betz limit power, which can be derived (not shown here) from actuator disc theory to be:
 
-<span id="page-173-0"></span>
+
 $$P\_{Betz} = C\_{Betz} \frac{1}{2} \text{ç} A\_{Swept} C\_{a\_{\text{w}}} \nu\_{w\_{ref}}{}^{\;3} \tag{85}$$
 
 Where:
@@ -1247,7 +1193,7 @@ $$\frac{P}{P\_{\text{Betz}}} = \frac{C \cdots \natural S}{A\_{\text{swept}} C\_{
 
 Where represents whatever power coefficients you wish to represent. In figure 37 , we'll _<sup>C</sup>_ · · · just use . The wind shear terms cancel, leaving only the effect of induced flow. The Betz _CiC_<sup>α</sup>_<sup>w</sup>_ 32 limit is a direct result of induced flow—since that's all we're considering, should be able _P_/_PBetz_ to reach the limit, taking on a value of 1, as shown in figure 37 .
 
-![](_page_174_Figure_6.jpeg)
+<div><img src="/assets/images/makani_paper/page_174_Figure_6.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 37 : Power coefficient representing induced flow losses and total power relative to the Betz limit versus normalized performance metric ζS/ζ 0 S 0 . Maximum power, as dictated by the Betz limit, is quickly reached with growing performance.**
 
@@ -1260,7 +1206,7 @@ From this plot we see:
 
 Let's take a moment to discuss what else this means for HAWTs. Unlike AWTs, HAWTs are heavily influenced by induced losses. We showed, in [equation 18 ,](#page-130-2) that the tension ratio, , for τ _<sup>L</sup>_ an AWT operating optimally is equal to 3. If we assume that optimal operation for a HAWT means operating at the Betz limit, what is the for a HAWT, where we replace tension with drag τ on the tower, ? To find the drag on the tower we first back our way through the Betz _Ftower_ derivation a bit, equating from [equation 85](#page-173-0) with [equation 78](#page-170-3) to find the wind speed at the _PBetz_ disc, , as . We can then find for a wind turbine operating at the Betz limit as _v<sup>w</sup>vh_,_<sup>i</sup>_ 2 3) / _<sup>v</sup><sup>w</sup>_ ( _vh_ τ shown in [equation 88](#page-175-0) .
 
-<span id="page-175-0"></span>
+
 $$\pi\_{Betz} = \frac{F\_{\text{tower}}}{F\_{T\_{\text{min}}}} = \frac{(\dot{m}\_{\text{v}\_{\text{v}hj}})\_{\text{v}\_{\text{v}\_{\text{v}hj}}}}{P\_{Betz}} = \frac{\varrho A\_{\text{sept}} \nu\_{\text{v}\_{\text{v}\_{\text{v}hj}}}^{\prime}}{P\_{Betz}} = 1.5 \tag{88}$$
 
 The tension ratio for a wind turbine operating near the Betz limit, as HAWTs typically do, is half that of an AWT operating optimally at a of 3. In other words, for the same power, the loads τ _<sup>L</sup>_ on the tower from an AWT are approximately twice that of a HAWT, which cuts in half the perceived benefit of reduced bending moments from a lower tower height typical of HAWTs.
@@ -1275,9 +1221,9 @@ increasing via increased wing area alone in our models. We'll ignore the effect 
 
 We see from our plots above that as decreases, the optimal tether length also increases, _kT DR_ especially at higher shear. So, we evaluate both a no wind shear case with a 300 m tether, and a normal wind shear case with a 450 m tether. We can now compare total performance—for the <sup>34</sup> AWT, we'll compare both cases with and without induced losses as an upper and lower bound, and always include induced losses for the HAWT. Keep in mind that we expect reality for an optimized solution to be closer to the more favorable non-induced losses case.
 
-![](_page_176_Figure_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_176_Figure_4.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 38 : HAWT vs AWT total power normalized by P 0 versus normalized system performance metric, ζS/ζ 0 S. AWTs are shown both with and without induced losses.**
+##### **Figure 38 : HAWT vs AWT total power normalized by P 0 versus normalized system performance metric, ζS/ζ 0 S. AWTs are shown both with and without induced losses.**
 
 There are some big takeaways from figure 38 :
 
@@ -1290,7 +1236,7 @@ There are some big takeaways from figure 38 :
 
 HAWTs have a strong motivation to have at least 3 blades for balancing reasons, and here we see why they don't have more: they can already approach the Betz limit with 3 normal sized wings. Of course, this wing isn't optimized for use on a tower—the value of higher is also ζ*<sup>L</sup>* diminished as the Betz limit is approached, and this is why we don't see HAWTs also chase high with high lift airfoils like AWTs do—a single element airfoil has significant simplicity and cost ζ benefits that outweigh the heavily reduced gains of the multi-element airfoil due to the increased induced flow that a high performance multi-element airfoil creates. This means that in the 3 wing comparison case above, a HAWT would likely simplify its "wings" to a single element with lower for little performance loss, perhaps making up for some of it with ζ increased blade area—adding blade area is often cheaper than adding an equivalent amount of through multi-element blades. ζ
 
-## <span id="page-177-0"></span>6.3 Conclusion
+## 6.3 Conclusion
 
 In this light, let's take a step back and critically examine the perceived power benefits of AWTs. A number of unique losses, in particular tether drag and elevation losses (from the combination of a minimum required altitude, turning losses, and a minimum turning radius) all act to reduce performance of an AWT relative to a HAWT with similar blades. Under these conditions, it's inaccurate to state that AWTs access higher power from higher winds, since the net effect is to create less power than the same wing mounted to a tower at the reference height!
 
@@ -1313,7 +1259,7 @@ Mass has a surprisingly small impact on crosswind performance, predominantly onl
 
 In summary, AWTs nearly completely eliminate the shackle of induced flow losses, only to trade it for the shackle of tether, elevation, turning, gravity, and speed losses. Stronger high altitude winds provide a benefit that can recoup some of the difference, but not enough for the systems explored here to see a net benefit.
 
-## <span id="page-178-0"></span>6.4 A Numerical Take on Path Shape
+## 6.4 A Numerical Take on Path Shape
 
 Thus far, we've limited the data to circular paths only, leaving non-circular paths to discussion alone.
 
@@ -1321,11 +1267,11 @@ Codes that can optimize path shapes certainly give non-circular results, outputt
 
 The top percentile of mean power for the given paths at a variety of wind speeds with zero shear is shown in figure 39 , looking downwind such that all paths are flown clockwise.
 
-![](_page_179_Figure_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_179_Figure_4.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 39 : Paths with the top percentile of power for ~25k brute force path evaluation of various closed path shapes, orientations, and locations for various wind speeds. There are two regimes visible—moderate winds where the kite flies tight and low paths to make maximal <sup>36</sup> power, and large offset paths at high winds to manage excess power.**
+##### **Figure 39 : Paths with the top percentile of power for ~25k brute force path evaluation of various closed path shapes, orientations, and locations for various wind speeds. There are two regimes visible—moderate winds where the kite flies tight and low paths to make maximal <sup>36</sup> power, and large offset paths at high winds to manage excess power.**
 
-<span id="page-179-0"></span>We see very similar optimal paths for 8 and 10 m/s of wind, as the 10 m/s solutions are nearly entirely obscured by the lower wind speed solutions. As expected, all these paths are as low as possible, and stretched only in the horizontal dimension. The M600 has more constraints limiting its ability to turn small path radii as a result of its heavy bridling and lack of strong tail
+We see very similar optimal paths for 8 and 10 m/s of wind, as the 10 m/s solutions are nearly entirely obscured by the lower wind speed solutions. As expected, all these paths are as low as possible, and stretched only in the horizontal dimension. The M600 has more constraints limiting its ability to turn small path radii as a result of its heavy bridling and lack of strong tail
 
 <sup>35</sup> Horizontally oriented figure eights weren't considered in this study, see comments in [section 6.3](#page-177-0) .
 
@@ -1337,7 +1283,7 @@ At high winds, the kite sees significant changes, increasing azimuth and elevati
 
 Now, let's look, in figure 40 , at the effect on power these variations on path can have.
 
-![](_page_180_Figure_5.jpeg)
+<div><img src="/assets/images/makani_paper/page_180_Figure_5.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 40 : Difference in power from the 99th percentile power to the best power for the paths shown in** figure 39 **.**
 
@@ -1355,7 +1301,7 @@ This isn't to say that all paths should be neat, crisp circles or perfect horizo
     -   Path location and shape become a key part of the power saturation strategy, which we'll discuss more later.
 -   For all wind speeds:
 
-<span id="page-181-0"></span>
+
 
 -   It's beneficial to ease the path curvature where most constrained at the 4-5 o'clock position, where gravity is adding to the turning effort while the kite has reduced airspeed since it's moving downwind. <sup>37</sup>
     -   This is best accomplished by tightening the curvature at the start of the downstroke, which still keeps the path vertically compressed.
@@ -1364,13 +1310,13 @@ Path variations such as these should be incorporated into final products, and Ma
 
 <sup>37</sup> This conclusion is gleaned from the dataset, as it isn't apparent from [Figure 39](#page-179-0) above, especially with the visual distortion from flattening paths with significant azimuth and elevation offset into the YZ plane, which gives the appearance of sharper turns in the 4-5 o'clock region.
 
-# <span id="page-182-0"></span>7 Mass
+# 7 Mass
 
 As a flying vehicle, we expect mass to play a large role in the performance of AWTs. Surprisingly, the relationship is found to be weaker than one might expect purely from a power generation perspective—once a system is in crosswind and generating power, changes in mass have a relatively small impact. Where mass matters a ton, at least for an onboard generation system that hovers to enter crosswind, is the weight limit it imposes on the total system for a given power system. The sensitivity to mass ends up being driven by the opportunity cost, as all optimal designs in Makani's models ended with the same conclusion: get the biggest, highest performing kite your power system can muster into crosswind.
 
 Here, we'll investigate some of the relationships and limits imposed by system mass for a hovering onboard generation system.
 
-## <span id="page-182-1"></span>7.1 Hover
+## 7.1 Hover
 
 It's useful to begin system design with a target power level in mind, and then determine the mass limit. We'll do an example exercise for the MX2, but the actual design process used a statistical approach with flight test data from the M600. That process is outlined in the MX2 design document [\[12\] .](#page-231-0)
 
@@ -1408,11 +1354,11 @@ In addition, the hover requirement creates a strong tie between the system rated
 
 relative to the performance of the kite—shrinking the power system results in a kite that is unable to hover. As such, AWTs in renewable saturated markets may be reliant on intentional curtailment or downrating rather than resizing of their powertrain to seek higher capacity factors.
 
-### <span id="page-185-0"></span>7.2 No Wind Upstroke
+### 7.2 No Wind Upstroke
 
 Our kite needs to be able to remain flying even when the wind cuts out. This can impose a hefty climb requirement. If we assume circular flight paths, a complete drop in wind, and climb at the lowest controllable airspeed, we can state this power requirement roughly as:
 
-<span id="page-185-2"></span>
+
 $$P\_{climb} = k\_{TWR} \left(\frac{m\_{total} \text{g} \gamma\_{a\_{\text{min}}} \cos \theta\_e}{\eta\_{bover}} + P\_{drag} \right) \tag{90}$$
 
 If the limiting power in the system is shaft power as above, then is again just the rotor _hover_ η efficiency, which at the power limit and airspeed is higher at 0.85. A over 1 is still needed _kTW R_ to maintain a safety margin, but we can perhaps go lower—here let's choose 1.1. Operating at peak , the of the MX2 system (including effective tether drag) is 0.123, giving a of ζ*<sup>L</sup> C<sup>D</sup> Pdrag* ~ 110 kW.
@@ -1421,35 +1367,35 @@ Solving [equation 90](#page-185-2) above for a path elevation of 0.45 rad and a 
 
 In practice, this constraint is less limiting than our simplistic model has indicated. We find that optimal strategies store a large amount of potential energy in kite speed, and as a result, minimum airspeeds are only seen near the top of the path. It does need to be accounted for though—low wind strategies need to be adjusted in the event of a sudden loss in wind to ensure there's enough airspeed to maintain control of the kite at top of the path. Some of this can be done in response to a loss of wind, such as lowering alphas and adding power earlier, but there may need to be adjustment of the overall strategy to become more tolerant of a loss in wind, such as storing more energy in kite speed at the bottom of the path than is optimal for power production.
 
-## <span id="page-185-1"></span>7.3 Mass in Crosswind
+## 7.3 Mass in Crosswind
 
 Finally, let's discuss the effect of mass on crosswind power generation. We'll use the analytical model for described in [section 6 ,](#page-125-0) and perturb the mass to find sensitivities. Inspecting _PAW T_ [equation 75 ,](#page-162-1) we find that the tether roll angle is approximately linear with changes in mass. If we assume the limit on turning radius is driven by the tether roll angle, and that we want to maintain
 
 a similar amount of roll margin as mass changes, then we scale the minimum turning radius constraint of 80 m we applied in [section 6.1.9](#page-153-0) proportionally with the change in mass, where the nominal mass is the MX2 kite target of 1850 kg, limiting the minimum size to 60 m to keep things reasonable. Doing so, and once again optimizing the strategy and loop radius, under _kgrav_ conditions of no wind shear, we find the following:
 
-![](_page_186_Figure_3.jpeg)
+<div><img src="/assets/images/makani_paper/page_186_Figure_3.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 41 : Numerically optimized power predictions from our analytical model with the MX2 system for various kite masses, scaling minimum path radius linearly with increases in mass. Dramatically lighter kites only bring comparatively minor improvements.**
+##### **Figure 41 : Numerically optimized power predictions from our analytical model with the MX2 system for various kite masses, scaling minimum path radius linearly with increases in mass. Dramatically lighter kites only bring comparatively minor improvements.**
 
 It requires a large mass growth to have a pronounced effect on the power, driven predominantly by the growing minimum radius constraint and its effect on the losses as the minimum _C_<sup>θ</sup>_<sup>e</sup>_ altitude constraint pushes the paths to higher elevations, with growing sensitivity as we drive off the cliff. Going the other direction, heavy mass reductions have a small impact. θcos 3 _e_
 
 Under positive wind shear, the effect in both directions shrinks, as the ideal path elevation gets closer to the minimum elevation limit and the losses are offset by the shear gains. If the cos<sup>3</sup> minimum turning constraint is held constant (ie, the heavier kites can turn just as tightly as the lighter ones), the sensitivity to mass shrinks even further. The combined effect is shown in figure 42 .
 
-![](_page_187_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_187_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 42 : Numerically optimized power predictions from our analytical model with the MX2 system for various kite masses, this time with positive wind shear and assuming a fixed constraint on path radius. Isolated this way, mass has negligible effect.**
 
 The conclusions from these simple analytical results are consistent with those from more detailed models and simulation. Once in crosswind, changes in mass for a given kite design are relatively small and unimportant, with the biggest impact being a gradual degradation of the kite's minimum turning radius. Oddly, this _amplifies_ the need for an accurate mass estimate during design. We have strong motivation in the design phase to maximize the of the kite to _S_ ζ maximize power production, which generally means lifting the biggest wing you can into crosswind, riding the limit of a given powertrain's capabilities in the hover and transition modes. If the mass grows even a little over the mass target, then the kite can't fly! Meanwhile, a kite that is lighter than expected has missed out on the opportunity to grow the kite's size, and sees little benefit of that reduced mass in crosswind.
 
-<span id="page-187-0"></span>
 
-# <span id="page-188-0"></span>8 Multi-kites
+
+# 8 Multi-kites
 
 The significant effect of tether drag and the BoS cost benefits makes the idea of multiple kites (multi-kites) on a single tether appealing. One possible concept of multi-kites is a "Y" configuration, shown in figure 43 , where the kites lift a shared stationary tether that then splits into several short tethers, enabling the kite to access stronger winds at higher altitudes without paying the drag penalty of a fully moving tether.
 
-![](_page_188_Figure_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_188_Figure_4.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 43 : Conceptual sketch of a "Y" multi-kite configuration, with a static tether section.**
+##### **Figure 43 : Conceptual sketch of a "Y" multi-kite configuration, with a static tether section.**
 
 This is a topic worthy of more discussion than we'll give it, but let's briefly explore the idea using our existing model with a few minor changes and notes:
 
@@ -1486,9 +1432,9 @@ However, we have a few caveats:
 -   A typical strategy will result in faster speeds and higher tensions at the _kgrav_ bottom of the loop, further tilting the moving tether cone upwards and increasing effective elevation angle losses.
 -   Multi-kites will have greater difficulty modifying path shapes, therefore missing out on secondary optimizations we haven't considered.
 
-![](_page_190_Figure_7.jpeg)
+<div><img src="/assets/images/makani_paper/page_190_Figure_7.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 44 : AWT and HAWT normalized performance relative to P 0 versus number of wings/kites/blades under wind shear of 1/7. Multi-kite Y configurations are represented with a k static of 0.7, while multi-kite clockface configurations are represented with a k static of 0. <sup>39</sup> <sup>40</sup>**
+##### **Figure 44 : AWT and HAWT normalized performance relative to P 0 versus number of wings/kites/blades under wind shear of 1/7. Multi-kite Y configurations are represented with a k static of 0.7, while multi-kite clockface configurations are represented with a k static of 0. <sup>39</sup> <sup>40</sup>**
 
 These points all perhaps miss the greater, non-quantifiable challenges of multi-kites. "Y" configuration multi-kites greatly increase the launch and land operational difficulties, add substantial complexity to crosswind control, and introduce a whole new set of single points of failure that could bring down the entire system. The main benefit is only unlocked with very long
 
@@ -1500,7 +1446,7 @@ tethers, which raises regulatory issues. Even if these can be addressed, they wi
 
 There are some alternate configurations that can address some of these problems. A "clockface" design, where each kite is effectively separate, only sharing a ground station, foregoes the static tether benefits to ease launch and land (kites only need to synchronize crosswind and transition into and out of crosswind) and make it easier control, as kites don't directly tug on each other as in a Y design. The clockface design isn't particularly appealing purely from a power perspective, but when one considers the BoS scaling pressures discussed in [s ection 3](#page-110-0) , it becomes much more compelling.
 
-![](_page_191_Picture_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_191_Picture_4.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 45 : Conceptual sketch of a "clockface" configuration for multi-kites.**
 
@@ -1508,11 +1454,11 @@ There are also hybrid solutions—a traveling crawler can enable the easier laun
 
 These alternatives do little to change the bigger picture: multi-kites, while initially appealing, appear to offer less performance benefits than anticipated due to the introduction of substantial induced flow losses and the costs of carrying a tether that is a large portion of total airborne mass, especially in light of the opportunity cost of devoting that mass to the tether rather than the wing. The development challenges further push this idea, in this author's opinion, firmly into the realm of the distant future. If AWE can create a successful, reliable product and gain years of real world experience with a single kite, then perhaps later designs can chase the potential gains of multi-kites, beginning with simpler clockface configurations to get the BoS advantages. An AWT design dependent on multi-kites as an initial product faces a daunting development challenge.
 
-![](_page_192_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_192_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 46 : Conceptual sketch of a traveling crawler design for multi-kites.**
 
-# <span id="page-193-0"></span>9 M600 Power Performance
+# 9 M600 Power Performance
 
 In " [M600 Energy Kite Description](#page-231-0) " [ [11](#page-231-0) ], we present the predicted and tested performance of the M600, Makani's prototype energy kite, in comparison with the original design intent.
 
@@ -1520,7 +1466,7 @@ Here, let's apply the simple analytical model we've developed here to take a mor
 
 Taking values for the M600 Intent and the M600 As-Built from table 1 , we evaluate them in our analytical model. Before doing so, we need to make one additional change. The M600 As-Built has a hard speed constraint of 70 m/s based on a predicted whirl flutter mode of the props. _v<sup>a</sup>max_ We can add this to our term in the same manner as our constraint. We also need to _C<sup>v</sup><sup>k</sup> v<sup>a</sup>min_ select an , choosing the minimum values of 75 m and 145 m for each system, respectively, _rloop_ and choose a of 0.7 for the M600 intent and 0.5 for the M600 As-Built, broadly _kgrav_ representative of how the kites were typically flown. We also repeat our MX2 example from figure 28.
 
-![](_page_193_Figure_6.jpeg)
+<div><img src="/assets/images/makani_paper/page_193_Figure_6.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 47 : M600 design intent power curve from more detailed models and our analytical model, along with analytical model results for the MX2 and the M600 As-Built. Also shown is the M600 As-Built and As-Flown simulation prediction, all under zero wind shear conditions.**
 
@@ -1530,9 +1476,9 @@ As we noted in " [M600 Energy Kite Description "](#page-231-0) [ [11](#page-231-
 
 To understand this, we need to look at what "as-flown" signifies. For wind speeds greater than 10 m/s, we were forced to deliberately degrade the kite's performance, for reasons we'll examine shortly. Let's take a look at some commanded flight parameters for the presented simulation prediction in figure 48 .
 
-![](_page_194_Figure_5.jpeg)
+<div><img src="/assets/images/makani_paper/page_194_Figure_5.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 48 : Alpha and path commands for the M600 As-Built and As-Flown simulation prediction. The kite is only operating optimally at ~9 m/s of wind. Paths are shown flattened into the downwind viewing plane, with offsets shown relative to downwind.**
+##### **Figure 48 : Alpha and path commands for the M600 As-Built and As-Flown simulation prediction. The kite is only operating optimally at ~9 m/s of wind. Paths are shown flattened into the downwind viewing plane, with offsets shown relative to downwind.**
 
 Optimum operation of this kite at a maximum alpha of 4 deg at the minimum path radius of ~145 m is only commanded at approximately of 9 m/s. This is where the analytical model, also _v<sup>w</sup>ref_ operating optimally, agrees well. As wind speed increases, the commanded alphas begin to drop, path sizes grow larger, azimuth offset shifts sharply to the right, and the as-flown performance relative to the optimum continues to drop.
 
@@ -1540,11 +1486,11 @@ Optimum operation of this kite at a maximum alpha of 4 deg at the minimum path r
 
 This begs the question: why are we commanding the kite in such a way to drastically reduce performance? The answer lies in some unique challenges for AWTs in high speed, turbulent winds, and those challenges are greatly exacerbated by large path sizes. The M600 was forced to degrade performance to avoid some of those challenges, and ultimately, high wind speeds remained an unsolved problem for the M600, with simulation indicating a maximum safe wind speed of ~15 m/s.
 
-<span id="page-195-0"></span>
 
-# <span id="page-196-0"></span>10 High Winds Are Hard
 
-### <span id="page-196-1"></span>10.1 Overview
+# 10 High Winds Are Hard
+
+### 10.1 Overview
 
 Much of the focus in AWT literature and HAWT design has been on making as much power as possible, and indeed, this should be the focus to have a competitive power curve, with a comparatively early cut in and first rated power point.
 
@@ -1552,7 +1498,7 @@ However, the challenges of what happens _beyond_ that point, as wind speed conti
 
 This tool is available to AWTs as well, but with much stricter limits, and as a result this method is unable to fully address the problem. We'll begin by investigating the fundamentals behind the high wind problem, then look at the various strategies available to AWTs to handle power saturation, as well as the limitations of each strategy.
 
-### <span id="page-196-2"></span>10.2 The Challenge
+### 10.2 The Challenge
 
 In order for a wind energy system to be competitive, it's desirable to saturate power at approximately 10 m/s, depending on the specifics of the site, power system, and local energy market. All wind energy systems also have a cut-out point, where the cost of building the <sup>42</sup> system to produce power at high winds and high loads isn't justified due to the rarity of high winds and their reduced value since all other wind based power is also at maximum production. Cut-out also depends on the specifics of the site and power system, but is typically around 20-25 m/s for lower wind sites and 25-30 m/s for high wind sites, especially offshore. A system designed for a particular cut-out needs to be able to survive gusts of several additional m/s, so for the examples to follow we'll use a wind speed of 24 m/s to represent the maximum wind speed for a 20 m/s design cut-out system, making our challenge as easy as possible.
 
@@ -1572,9 +1518,9 @@ $$P\_{\psi} = \frac{P\_{AWT}}{P\_0} P\_0 + P\_{grav, \psi} \eta\_{t2g} \tag{91}$
 
 Assuming a of 0.25 (approximately the best for wind speeds near the desired rated _PAW T_ /_P_<sup>0</sup> power point, from figure 26 ) with a of 0.7, we have figure 49 . _kgrav_
 
-![](_page_198_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_198_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-![](_page_198_Figure_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_198_Figure_4.jpeg" class="img-fluid" alt=""></div>
 
 Higher wind speeds are intentionally cut off here, as they blow up the scale. Despite the small loop sizes and a strategy that stores most of the potential energy in kite speed, there is still approximately +/- 250 kW of power pumping in and out of the kite's power system.
 
@@ -1584,7 +1530,7 @@ We've now set the stage for the problem: AWTs, just like HAWTs, need to develop 
 
 ## 10.3 Strategies
 
-### <span id="page-199-0"></span>10.3.1 Reducing lift
+### 10.3.1 Reducing lift
 
 The most obvious strategy is to implement the now common HAWT solution—reduce the power by reducing the lift generated by the blades/wing. There are two limiting factors for this on AWEs:
 
@@ -1593,7 +1539,7 @@ The most obvious strategy is to implement the now common HAWT solution—reduce 
 
 Let's begin by briefly examining the first item. In order to leave enough margin for control errors and gusts, the MX2 kite is limited to -10 deg to prevent separation. Below, in figure 50 we plot ζ as a function of aerodynamic angle for the MX2 kite: _<sup>L</sup>_ α
 
-![](_page_199_Figure_8.jpeg)
+<div><img src="/assets/images/makani_paper/page_199_Figure_8.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 50 : ζ L performance metric for the MX2 kite at different alphas, at the nominal normalized angular rates.**
 
@@ -1605,7 +1551,7 @@ limits us to -7 deg for a path radius of 80 m, which is a of 20, double the mini
 
 The issue is compounded by how sharp this turning limit is. Close to the turning limit, it takes large changes in tether roll angle to tighten the turn. Revisiting the minimum turning radius plot, but this time holding wind speed constant (and at a higher, more relevant wind speed here of 14 m/s) and plotting the minimum turning radius as a function of maximum tether roll angle , we γ find:
 
-![](_page_200_Figure_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_200_Figure_4.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 51 : Minimum instantaneous turning radius for the MX2 versus lift coefficient and alpha at various tether roll angles.**
 
@@ -1615,9 +1561,9 @@ In figure 51 , we see that near the limit, each additional amount of roll gains 
 
 Based on the minimum turning limits shown, and the difficulty in increasing them, we'll choose a lower limit on alpha of -7 deg, which reduces by a factor of about 2, and repeat the plot, in ζ*<sup>L</sup>* figure 52 , with the simple power model created above:
 
-![](_page_201_Figure_3.jpeg)
+<div><img src="/assets/images/makani_paper/page_201_Figure_3.jpeg" class="img-fluid" alt=""></div>
 
-![](_page_201_Figure_5.jpeg)
+<div><img src="/assets/images/makani_paper/page_201_Figure_5.jpeg" class="img-fluid" alt=""></div>
 
 Reducing by a factor of 2 only staves off the first power saturation point to ~12 m/s! Other ζ strategies will need to be used to shave the downstroke peak beyond this point, as well as shift the entire power production down to reach 24 m/s of wind.
 
@@ -1629,7 +1575,7 @@ Thus far, we've been assuming the kite is operating with a speed strategy center
 
 Let's explore this by revisiting the plot of vs kite speed for the MX2 system, this time also ζ*<sup>v</sup>* plotting solutions at the lower and expanding the wind speeds shown. Again, we have chosen α θ*e* = 0.45 rad and zero shear:
 
-![](_page_202_Figure_3.jpeg)
+<div><img src="/assets/images/makani_paper/page_202_Figure_3.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 53 : Performance metric ζ v for the MX2 system versus kite speed for a variety of wind speeds and shears.**
 
@@ -1639,9 +1585,9 @@ Let's explore this further. To maximize this benefit, we need the kite to fly as
 
 So we'll target the low end, attempting to manage power by going slower than optimum. Let's assume our kite has a minimum controllable airspeed, , of 30 m/s, and that . We can _v<sup>a</sup>min v<sup>a</sup>_ ≈ _v<sup>k</sup>_ then define the speed range in terms of . We plot the same data as above, but this time _kgrav_ show power rather than , where we simplify power to <sup>ζ</sup> (again assuming _<sup>v</sup>_ (ζ*v*/ζ )( _L AW T P P_/ 0 0 ) _<sup>P</sup> <sup>P</sup> <sup>P</sup>_ is a constant 0.25, and taking care to note that is at the reduced of -7 deg, while _AW T_ / <sup>0</sup> ζ*<sup>v</sup>* α ζ is at the best achievable of zero), and we focus on higher wind speeds and lower , since _<sup>L</sup>_ α α we're interested in kite speed mostly as a power limiting strategy here.
 
-![](_page_203_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_203_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 54 : Power versus kite speed for the MX2 system, with regions denoting various kite speed ranges for a given k grav fraction, assuming minimum possible speeds and at our minimum viable alpha.**
+##### **Figure 54 : Power versus kite speed for the MX2 system, with regions denoting various kite speed ranges for a given k grav fraction, assuming minimum possible speeds and at our minimum viable alpha.**
 
 Colored bands in figure 54 indicate the speed range dictated by a given strategy that _kgrav_ touches the minimum airspeed—ie, as slow as possible. The higher bands are inclusive of the lower ones, and our approximate power limit is denoted with the black line.
 
@@ -1653,13 +1599,13 @@ Lower factors from those shown can keep the power from wind within limits, but a
 
 In short, there's plenty of merit in this strategy, but even combining it with the minimum lift strategy appears insufficient to fully manage excess power.
 
-#### <span id="page-204-0"></span>10.3.3 Path
+#### 10.3.3 Path
 
 What about the path location? In [section 6.1.2 ,](#page-132-0) we discussed the losses with increasing cos<sup>3</sup> path elevation angle. Can it be effectively utilized to manage excess power at high wind speeds? Path location was previously investigated only in the context of elevation offset, but what about azimuth offset? Can both be utilized to shift power peaks around and address the transition zone?
 
 Let's begin with the transition zone. Here, we desire a kite path that flattens the power peaks caused by the strategy and the potential energy exchange—ie, we want to remove power _kgrav_ from the downstroke and add it to the upstroke. For a kite moving clockwise around a path viewed looking downwind, one could imagine an azimuth shift to the right would move the upstroke more downwind, and the downstroke increasingly offwind, as shown in figure 55 :
 
-![](_page_204_Figure_6.jpeg)
+<div><img src="/assets/images/makani_paper/page_204_Figure_6.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 55 : Desired effect of azimuth offsets is to shift power from where it's unneeded to where it's needed.**
 
@@ -1667,9 +1613,9 @@ However, recall from above that power is really attenuated by , ie, roughly by h
 
 offset, and power attenuation is similar on both sides—if this is indeed the case, it is not a good way to accomplish our goal.
 
-![](_page_205_Figure_3.jpeg)
+<div><img src="/assets/images/makani_paper/page_205_Figure_3.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 56 : Typical effect of azimuth offsets, assuming operation close to r loop,ideal . In this condition, azimuth alone is ineffective at moving power around as power scales with cos <sup>3</sup>θ offwind , which is similar on both sides of the path.**
+##### **Figure 56 : Typical effect of azimuth offsets, assuming operation close to r loop,ideal . In this condition, azimuth alone is ineffective at moving power around as power scales with cos <sup>3</sup>θ offwind , which is similar on both sides of the path.**
 
 However, this effect is compounded by the fact that path offset from the wind introduces path components that are into and out of the wind. Non-circular paths create those components as well, but for optimal paths it's typically not significant, while the components from azimuth and elevation can be quite large. Until now, we've been ignoring the effect this movement into and out of the wind has on power. Does this expected relationship hold true with this effect?
 
@@ -1681,9 +1627,9 @@ Aerodynamic angles, wind speed, path elevation, and path shape are held fixed as
 
 We begin a constant speed strategy at the Loyd optimum , to attempt to isolate the effect _v<sup>k</sup><sup>L</sup>_ azimuth has on power, which leaves no free variables to optimize over. To reiterate, the goal in the transition region is to shift power from the peak to the valley.
 
-![](_page_206_Figure_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_206_Figure_4.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 57 : Power versus loop angle at various azimuth offsets, providing numerical confirmation that turning near r loop,ideal negates the ability of azimuth offsets to shift power.**
+##### **Figure 57 : Power versus loop angle at various azimuth offsets, providing numerical confirmation that turning near r loop,ideal negates the ability of azimuth offsets to shift power.**
 
 Clearly, the hypothesis is correct in this context—azimuth slews are wholly unable to shift power from the peak for a path at the ideal turning radius. The power looks very nearly sinusoidal with loop angle at all azimuths, demonstrating that the potential energy exchange is indeed the dominant effect for the power fluctuations. The phase shift in airspeed versus kite inertial speed that occurs with increasing azimuth offset doesn't appear to shift the power around much at all. There is an overall drop in power with increasing azimuth that is in line with losses. While cos<sup>3</sup> those losses can be useful for very high winds, they are not useful for shifting power around in the transition zone.
 
@@ -1693,7 +1639,7 @@ We need to be careful that we're drawing the correct conclusions though, as the 
 
 For this iteration, we go back to our 80 m path radius, slightly tighter than the pure turning losses optimum, and open up kite speed strategy to an optimizer. Everything else is kept the same. We're trying to show just the effect of path location on power, so the optimizer is set up to seek best power in the absence of a power limit—there may be additional speed strategies that can better shift power around in the presence of a power limit. Before we dig into the effect on power, let's see some ways that a numerically optimized speed strategy differs from our _kgrav_ approximations above.
 
-![](_page_207_Figure_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_207_Figure_4.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 58 : Kite inertial and airspeed strategies versus loop angle at various azimuth offsets.**
 
@@ -1701,9 +1647,9 @@ Speed strategies are indeed fairly sinusoidal in shape, and generally centered s
 
 reaching a peak value of 0.5 for the downstroke and a minimum value of -0.5 for the upstroke. Let's see what this new parameter looks like.
 
-![](_page_208_Figure_3.jpeg)
+<div><img src="/assets/images/makani_paper/page_208_Figure_3.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 59 : Instantaneous k grav,i factors versus loop angle. Real strategies can be more nuanced than a simple k grav strategy, and can be utilized to shift some power around.**
+##### **Figure 59 : Instantaneous k grav,i factors versus loop angle. Real strategies can be more nuanced than a simple k grav strategy, and can be utilized to shift some power around.**
 
 Although potential energy still forms the main reason we vary speed around the loop, we should simply think of as the rate we're storing energy in the form of kite speed, as it does not _kgrav_,_<sup>i</sup>_ necessarily align with moving through the gravity field. This is demonstrated by the phase shift in figure 59 . The _peak_ value of can usually be used as a decent proxy for a that _kgrav_,_<sup>i</sup> kgrav_ represents the effect of the in our simpler analytical model, but strictly speaking, the terms _v<sup>k</sup>_ Δ represent different things. Effects of a real speed strategy can only be well represented with a _kgrav_ if the strategy is very nearly sinusoidal, which is usually the case.
 
@@ -1711,7 +1657,7 @@ The first thing to note is that the peak values of appears to be lower than our 
 
 Now, we can show the effect on power.
 
-![](_page_209_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_209_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 60 : Power versus loop angle at various azimuth offsets, demonstrating the complex relationship with power once combined with various speed strategies.**
 
@@ -1729,7 +1675,7 @@ Another beneficial aspect of large path offsets, aside from lowering the overall
 
 Combining all the power saturation strategies described thus far is typically enough for optimization codes with assumptions of perfect control and smooth wind fields to find fully saturated power solutions for most kites to the cut-out wind speeds of 20-25 m/s, with some roll-off in performance as we blend in power saturation strategies. However, these fail in more realistic scenarios, so let's investigate a few more power management tricks before looking into some overall strategies those codes suggest.
 
-### <span id="page-210-0"></span>10.3.4 Excess Drag
+### 10.3.4 Excess Drag
 
 Our final strategy is to deliberately degrade the kite's performance. The simplest implementation is to utilize existing aerodynamic surfaces at deflections large enough to cause separation.
 
@@ -1743,7 +1689,7 @@ is 70 m/s, the required area of our drag device is ~3 m <sup>2</sup>_v_ . This i
 
 The fact that we're dealing with a power saturation issue clearly indicates the rotors should already be working hard, so for this use case, what we desire is for the rotor efficiency to dramatically drop. Let's begin by taking a look at a map of our MX2 rotor efficiency, truncating the color scale to positive efficiency only for clarity:
 
-![](_page_211_Figure_4.jpeg)
+<div><img src="/assets/images/makani_paper/page_211_Figure_4.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 61 : Rotor efficiency as a function of rotor speed and airspeed for the 4th generation Makani rotors. The lower right represents forward thrust, consuming power, while the upper left represents rotor drag, generating power.**
 
@@ -1753,7 +1699,7 @@ increasing wind speeds. We begin at the bottom on the lower side of the efficien
 
 What are the potential downsides of this? First is noise—rotor noise is strongly coupled with rotor tip mach speed, and utilizing this strategy requires intentionally reaching these high tip speeds, likely limiting heavy use of such a strategy to offshore or other remote locations. The second is rotor life, as high speed rotors, especially those operating close to mach 1, result in increased wear.
 
-### <span id="page-212-0"></span>10.3.5 Piecing Together a Strategy
+### 10.3.5 Piecing Together a Strategy
 
 We've identified many pieces of a power saturation strategy—can they be assembled into a robust solution?
 
@@ -1763,39 +1709,39 @@ Before we do so, it should be reiterated that several different codes, models, a
 
 We're not going to dig into all the modeling details and settings here, as the code and model these results are based on is provided, but the high level view is that this model assumes perfect control and no wind turbulence. Taking the MX2 model and optimizing it for power across all wind speeds with a circular path shape and no wind shear for simplicity results in the power curve shown below, with the maximum and minimum power around the path also shown in figure 62 .
 
-![](_page_213_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_213_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 62 : Minimum, mean, and maximum power around a loop for different wind speeds. Note the kink in minimum power around zero, as the optimizer strives to minimize pumping losses by eliminating power consumption as soon as possible.**
+##### **Figure 62 : Minimum, mean, and maximum power around a loop for different wind speeds. Note the kink in minimum power around zero, as the optimizer strives to minimize pumping losses by eliminating power consumption as soon as possible.**
 
 This kite begins saturating power at ~11m/s of wind, and is mostly saturated at 15 m/s. We'll look for strategy changes across what we'll call the "transition zone" from 10-15 m/s, and in what we'll call the "survival zone" from 15-20 m/s.
 
-#### <span id="page-213-0"></span>10.3.5.1 Path Strategy
+#### 10.3.5.1 Path Strategy
 
 In figure 62 , we view the paths looking downwind, located by their centroids, rotated to be flattened into the viewing plane for clarity, and colored by position to denote model evaluation points—we'll reuse these colors to mark these positions in some later plots. The flattening undercuts how much azimuth slew is going on here—with a tether length of just 300 m and path radii around 100 m, an offset of ~280 m is entirely perpendicular to the viewing plane we've squashed the paths onto. The arrows indicate the direction of travel—clockwise in this case. In later plots, we'll present data versus normalized path distance. In all those examples, we begin our path at the top, and proceed clockwise.
 
-![](_page_214_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_214_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 63 : Visualization of the path strategy at different wind speeds. Paths are flattened to the viewing direction, which is directly downwind.**
 
 The path strategy in figure 63 has some small azimuth shifts that move the downstroke further off-wind in the transition wind speeds, but there isn't much of a strategy change until winds approach the survival zone at > 15 m/s. At this point we begin to see substantial azimuth and elevation offsets, with slightly larger path radius as well.
 
-#### <span id="page-214-0"></span>10.3.5.2 Lift and Speed Strategy
+#### 10.3.5.2 Lift and Speed Strategy
 
 Before picking apart the lift strategy, it should be noted that this kite is an actively tension-limited kite. Tension limiting was discussed in [section 6.1.8](#page-151-1) , and here the start of tension limiting intentionally coincides with the start of power limiting, also about 10 m/s of wind. The highest tension portions of the loop also roughly correspond to the highest power portions of the loop, and there's substantial overlap in the response to each—lower alpha and airspeed.
 
-![](_page_215_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_215_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 64 : Minimum, mean, and maximum tension versus wind speed. Tension limiting begins at around 9 m/s of wind, and the entire loop is nearly operating at the tension limit for wind speeds >15 m/s. Jaggedness is from optimizer solution variations.**
 
 Airspeed strategies look fairly sinusoidal, and increase nearly linearly with wind speed until we reach the survival regime, at which point speeds no longer increase, utilizing the lower airspeed as a power and tension management strategy.
 
-![](_page_216_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_216_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 65 : Inertial speed and airspeed versus distance around the path at various wind speeds. The difference between them grows at higher wind speeds due to the increasingly offset azimuth and elevation strategies.**
+##### **Figure 65 : Inertial speed and airspeed versus distance around the path at various wind speeds. The difference between them grows at higher wind speeds due to the increasingly offset azimuth and elevation strategies.**
 
 How much is this model able to reduce alpha? In figure 51 , we showed an analytical model that indicated a limit of ~ -7 deg of alpha for this kite to continue being able to make the turn. Here, we see the limit here is slightly below the estimated limit. This alpha reduction begins primarily as tension management, looking like the inverse of the airspeeds in the transition zone from 10-15 m/s of wind with dips in alpha at the bottom of the path, but broadens that lower alpha region to be more on the downstroke as we move into the survival wind speeds > 15 m/s, where it's now also working to manage power.
 
-![](_page_217_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_217_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 66 : Alpha versus distance around the path at various wind speeds. Low winds see alpha drops to minimize losses, medium winds see nearly constant operation at the optimum, while high winds see substantial reductions in alpha to manage excess power.**
 
@@ -1807,19 +1753,19 @@ A over one means we're accelerating the kite faster than 1 G, basically storing 
 
 At moderate wind speeds of 8-10 m/s, the optimizer is just finding the balance between off-optimal speed losses and grid pumping losses, as we did in our analytical model before, with similar average absolute values of around 0.4-0.5 at these wind speeds.
 
-![](_page_218_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_218_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 67 : Instantaneous k grav,i fractions versus distance around the path at various wind speeds. At high wind speeds, the system stores a lot of wind energy in kite speed on the downstroke, as shown by the k grav,i factors reaching well over 1.**
 
 Interestingly, at the very low wind speeds ≤6 m/s, the trend is reversed from our analytical model, which was trending towards a of 1. The analytical model simply falls apart here. _kgrav_ Minimum kite speeds combined with typical elevation angles result in the kite moving upwind or downwind faster than the effective wind speed on the upstrokes and downstrokes! This largely invalidates our model for at these very low wind speeds. The power penalty of going fast is ζ*<sup>v</sup>* higher and the balance shifts towards a slower, more constant speed strategy with lower _kgrav_ values. Despite these inaccuracies, the analytical model still works well for predicting cut-in, and captures the sensitivities at medium and high winds well.
 
-#### <span id="page-218-0"></span>10.3.5.3 Rotor Strategy
+#### 10.3.5.3 Rotor Strategy
 
 Barring the nosedives to negative efficiencies as the rotor flops through a no power zone between generation and power consumption at the lowest wind speeds, the bulk of the "make as much power as possible" regime from 6-10 m/s of wind is at a fairly constant rotor efficiency, around 80%.
 
-![](_page_219_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_219_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 68 : Rotor efficiency from thrust/drag power to shaft power versus distance around the path at various wind speeds. Transitions between thrusting and generation at low winds aside, the system typically operates at a nearly constant efficiency until high winds and high kite speeds are reached.**
+##### **Figure 68 : Rotor efficiency from thrust/drag power to shaft power versus distance around the path at various wind speeds. Transitions between thrusting and generation at low winds aside, the system typically operates at a nearly constant efficiency until high winds and high kite speeds are reached.**
 
 Throughout the transition zone the kite utilizes increasingly inefficient rotors, and is heavily reliant on draggy rotors to manage excess power at the highest wind speeds, shedding almost ~1.5 MW of excess wind power from the drop in efficiency. Perhaps equally important is that the rotors are still fairly efficient at the top of the path in order to saturate power. In fact, if we look at what else the kite is doing at this point, nearly everything is working to maximize power. Alpha is only lowered by ~2 deg, and kite speeds are near the ideal for the effective wind speed. Saturating power requires the kite to work fairly hard to make power for part of the loop, and then work equally hard to dump excess power for the rest, even at the highest wind speeds.
 
@@ -1827,11 +1773,11 @@ Alternatively, we can plot these solutions onto our rotor map. Using the same co
 
 In figure 69 , we can easily visualize how well the rotor is matched to the airframe. At low winds, the strategy traverses the highest efficiency regions of the generation and consumption contours. The low efficiency valley in the middle corresponds with essentially no power or thrust, and has little effect. Power saturation is entered while still near the efficiency peak, and following the power limit sends us quickly off this peak, which is what we're looking for.
 
-![](_page_220_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_220_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 69 : Rotor map for the MX2 overlaid with loop solutions at various wind speeds. Path locations are colored the same way as in** figure 63 **. High wind speeds (≥ 16 m/s) loops are obscured, as solutions follow the power limit line.**
 
-<span id="page-220-0"></span>Now that we've identified a possible representative strategy, let's pick it apart.
+Now that we've identified a possible representative strategy, let's pick it apart.
 
 ### 10.3.6 Poking holes in our strategy
 
@@ -1859,13 +1805,13 @@ In the interest of not introducing yet another model only to arrive at a similar
 
 Getting back to the presented solution, let's discuss the effects included in simulation that cause it to fall apart.
 
-#### <span id="page-222-0"></span>10.3.6.1 Turbulence
+#### 10.3.6.1 Turbulence
 
 The fact that simply removing or reducing turbulence from simulation is enough to find survivable (but not power saturated) solutions for the M600 is a strong indicator that turbulence drives the failure to translate solutions from simpler models.
 
 Let's dig into this using our simpler numerical model. Using the solution above and perturbing the wind, we can get thrust power sensitivity to wind gusts around the path for different wind speeds.
 
-![](_page_222_Figure_7.jpeg)
+<div><img src="/assets/images/makani_paper/page_222_Figure_7.jpeg" class="img-fluid" alt=""></div>
 
 **Figure 70 : Change in thrust power for a change in wind speed versus distance around the path at various wind speeds. High winds bring increased power sensitivity to gusts—unsurprising given the v <sup>w</sup> <sup>3</sup>relationship with power.**
 
@@ -1873,17 +1819,17 @@ The sensitivity in thrust power to wind gusts is huge. A small gust of just 3 m/
 
 The shape of these curves is also interesting, and is mostly driven by path location as a result of the sensitivity to wind combined with movement in and out of the wind on the upstroke cos<sup>3</sup> and downstroke. Unfortunately, moving these curves around by changing the path shape and offsets also affects the mean power production—a path that is less sensitive to wind gusts is also a path that generates less power. There's still room for improvement here though. Penalizing high sensitivity to wind results in higher azimuth and elevation offsets from the wind direction, and there's a small region where this can be done with small impact on power. In other words, there's a tradeoff between reducing the average saturated power level and robustness of the saturated power solution to wind gusts.
 
-#### <span id="page-223-0"></span>10.3.6.2 Control Variability
+#### 10.3.6.2 Control Variability
 
 Imperfect control is another significant contributor to the issue. We see a similarly large sensitivity in power to most control parameters. Errors in alpha are an obvious example—we expect changes in lift to have a strong relationship with power. Repeating the exercise from above but for alpha results in figure 71 .
 
-![](_page_224_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_224_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 71 : Change in thrust power for a change in alpha versus distance around the path at various wind speeds. This sensitivity is highly dependent on path strategy and loop angle.**
+##### **Figure 71 : Change in thrust power for a change in alpha versus distance around the path at various wind speeds. This sensitivity is highly dependent on path strategy and loop angle.**
 
 In figure 71 , the sensitivity is concentrated on the upstroke at high winds, where the kite is flying into the wind, but we find that a degree or two of error can result in a hundreds of kW change in thrust power. Again, with a relatively lightweight kite, these errors can build to become an overspeed problem quickly.
 
-#### <span id="page-224-0"></span>10.3.6.3 Tether Dynamics
+#### 10.3.6.3 Tether Dynamics
 
 Thus far, we've neglected to discuss any tether dynamics, and our models have all assumed a rigid, straight-line tether. There are two areas where a more realistic tether model makes things more difficult.
 
@@ -1901,7 +1847,7 @@ $$f\_{plunge} = \frac{1}{2\pi} \sqrt{\frac{k\_{\text{teher}}}{m\_{\text{ite}}}} 
 
 With this simple model, the natural frequency of the plunge mode for the MX2 kite is approximately 0.9 Hz, and about 0.8 Hz for the M600. The tether plunge mode is omnipresent—the M600 sees this mode (closer to 0.75 Hz for the real system, as catenary and tether mass slightly slows this down) present in much of our flight test data. Bouncing the kite on the end of the tether creates additional controls challenges—shedding and gaining lift from gusts or control actions can excite this mode and begin to jerk the kite around. Actively controlling tension or power is challenging as the controller is bandwidth constrained.
 
-#### <span id="page-225-0"></span>10.3.6.4 All the Rotors
+#### 10.3.6.4 All the Rotors
 
 In order to saturate power at high winds, the kite by definition needs to follow the power limit line on our rotor map. While effective at dissipating large amounts of excess power, this is highly constraining and difficult to achieve in practice. The model used here has a single representative rotor—the real system with 8 rotors has differing local airspeeds as a result of circulation created by the wing lift combined with body rates. The result is a fairly wide spread in operating conditions for each rotor. Future plans for the MX2 design were to incorporate location-specific rotor designs, changing pitch to match typical crosswind conditions at each station.
 
@@ -1913,19 +1859,19 @@ rotor moments should be kept low or used to actively steer the kite. Moderate wi
 
 It's unlikely that all rotors will be able to be simultaneously saturated for the breadth of conditions for the entire saturated power regime shown, like this simpler model with a single representative rotor is able to. Some derating of the system will be required to account for this effect, likely reducing the rated power by an anticipated 10-20% from that shown in the power curve plots above. This derating due to imbalanced rotor limits is at least partially responsible for the blackbox simulation optimization for the M600 resulting in less than fully saturated power. The net effect for the MX2 system remains unquantified—because this is inextricably tied to the overall power saturation strategy, it too remained unsolved for Makani.
 
-#### <span id="page-226-0"></span>10.3.6.5 Kite Acrobatics
+#### 10.3.6.5 Kite Acrobatics
 
 An AWT under normal operation needs to be a fairly acrobatic aircraft. Optimal operation will have the kite turning tight paths at low elevation under consistently high alphas. This isn't unexpected, but the power saturated regime poses additional challenges here as well.
 
 Reducing lift to manage power raises body rates that are already high, as the kite must quickly change its roll angle to compensate for the loss of lift and continue to make the turn. High performance AWTs, with wings more akin to gliders than stunt planes, can struggle here. In figure 72 , we look at the body rates for our solution.
 
-![](_page_226_Figure_7.jpeg)
+<div><img src="/assets/images/makani_paper/page_226_Figure_7.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 72 : Angular body rates about each axis versus normalized path distance at various wind speeds. High wind speeds bring with them higher body rates. Of particular importance are the large roll and yaw rates.**
+##### **Figure 72 : Angular body rates about each axis versus normalized path distance at various wind speeds. High wind speeds bring with them higher body rates. Of particular importance are the large roll and yaw rates.**
 
 The body rates shown here are assuming nominal operation, with perfect control and no gusts. Real rates can fluctuate by 10 deg (0.17 rad) per second or more. These high body rates bring with them large aerodynamic moments that then require large control surfaces to counteract. These considerations drove much of the MX2 tail design, and gave us additional motivation to avoid increases in span, despite the induced drag benefits of doing so.
 
-### <span id="page-227-0"></span>10.4 Power Saturation Summary
+### 10.4 Power Saturation Summary
 
 In the end, it all comes down to addressing turbulence and shifts in wind speed. If a solution is to exist here, it would be helpful to contain a few key elements.
 
@@ -1936,17 +1882,17 @@ In the end, it all comes down to addressing turbulence and shifts in wind speed.
 
 The first criteria is met by our solution, which we can see in figure 73 .
 
-![](_page_228_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_228_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 73 : Change in shaft power for a change in kite speed versus normalized distance around the path at various wind speeds. Thanks to plummeting rotor efficiency, increasing kite speeds at high winds can reduce shaft power, creating some room to generate additional drag.**
+##### **Figure 73 : Change in shaft power for a change in kite speed versus normalized distance around the path at various wind speeds. Thanks to plummeting rotor efficiency, increasing kite speeds at high winds can reduce shaft power, creating some room to generate additional drag.**
 
 As kite speed increases, high winds generally see a decrease in shaft power, meaning that we come off the power limit line on our rotor maps and gain some drag thrust margin on our rotors, thanks to the plummeting efficiency of our rotors. The system is then able to add drag to correct an overspeed where the value in the above plot is negative (at lower wind speeds this isn't necessary, as we're not at maximum power). This derivative does not meaningfully change for changes in airspeed of 5-10 m/s.
 
 The fourth criteria is not met here though. In figure 74 , we plot the change in thrust power for a change in kite speed.
 
-![](_page_229_Figure_2.jpeg)
+<div><img src="/assets/images/makani_paper/page_229_Figure_2.jpeg" class="img-fluid" alt=""></div>
 
-#### **Figure 74 : Change in thrust power for a change in kite speed versus normalized path distance at various wind speeds. Comparing this with figure 73 shows the effect of dropping rotor efficiency—shaft power is decreasing even as thrust power is increasing.**
+##### **Figure 74 : Change in thrust power for a change in kite speed versus normalized path distance at various wind speeds. Comparing this with figure 73 shows the effect of dropping rotor efficiency—shaft power is decreasing even as thrust power is increasing.**
 
 The kite continues to produce more thrust power as it overspeeds. In the absence of active control or in the presence of a power system failure, the kite will overspeed by tens of m/s. Larger path offsets can address this, lowering at the cost of lowering the average ∂*P* ∂*v thrust*/ _<sup>k</sup>_ power. Maximum continuous power will be limited not by the actual hardware, but by the system's lack of ability to safely maximize use of its hardware.
 
@@ -1960,7 +1906,7 @@ In the meantime, all models that lack turbulence and control errors should have 
 
 Ultimately, the challenge is driven by shifts in wind and turbulence, and as such is stochastic in nature. It becomes a question of how large of a gust or wind shift can the system survive, and for how long. Only extensive simulation and flight testing can tell.
 
-# <span id="page-231-0"></span>11 References
+# 11 References
 
 -   1. _Makani Code Release_ , Makani Technologies LLC, 2020. [Online]. Available: <https://github.com/google/makani/>
 -   2. IEA, "Global Energy Review 2020," Paris, France, 2020. [Online]. Available: <https://www.iea.org/reports/global-energy-review-2020>
@@ -1980,11 +1926,11 @@ Ultimately, the challenge is driven by shifts in wind and turbulence, and as suc
 
 <sup>47</sup> A much-condensed version is provided in NREL's excellent System Advisor Model (SAM) help documentation [6].
 
-# <span id="page-232-0"></span>12 Appendix
+# 12 Appendix
 
-### <span id="page-232-1"></span>12.1 Numerical Model Description
+### 12.1 Numerical Model Description
 
-#### <span id="page-232-2"></span>12.1.1 Overview
+#### 12.1.1 Overview
 
 This model began as a small component of an overall system design model that estimated all costs and energy production for an entire plant of systems over the plant's life, with this sub-model responsible for evaluating the power performance of a given design. In its initial form, speed and simplicity were of paramount importance, so it leaned heavily on several of the analytical approaches we'll outline below.
 
@@ -2002,11 +1948,11 @@ Moving one level up in the model, we create closed paths that we call loops, and
 
 Finally, there's a top level that varies the wind speed to create a power curve. It does so by creating and optimizing loops for each wind speed, feeding the optimized result of a lower wind speed as the seed of the next higher wind speed. This is an important step, as high wind speed operation is highly constrained, and finding a good solution is dependent on a good initial seed.
 
-#### <span id="page-233-0"></span>12.1.2 Sub-Models
+#### 12.1.2 Sub-Models
 
 The following sub-models are optional, and can easily be replaced with a user provided function. In several examples in this text we have done so, for example, to replace the rotor model with a rotor of constant efficiency.
 
-#### <span id="page-233-1"></span>12.1.2.1 Rotor Model
+#### 12.1.2.1 Rotor Model
 
 Rotor maps are typically dimensionalized in terms of rotor rotational speed and the freestream velocity as the lookup for thrust and torque. For our model, we instead have required thrust and freestream velocity. We could search the table to find the required thrust —an earlier version tried this approach and found it slow, and without additional steps to smooth the output, full of kinks that gave the optimizer difficulties. In addition, we'd like to non-dimensionalize the model to enable us to evaluate a similar rotor design, but at a different scale.
 
@@ -2014,13 +1960,13 @@ Rotor maps are typically dimensionalized in terms of rotor rotational speed and 
 
 In order to do so, we non-dimensionalize the rotor table output in terms of a coefficient of power, _C<sup>p</sup>_ , and coefficient of thrust, . The relationship between and defines the _C<sup>t</sup> C<sup>t</sup> C<sup>p</sup>_ 49 performance of the rotor by describing how much thrust (or in the case of generation, negative thrust, ie, drag) translates into power. We find a polynomial fit for this relationship across different freestream velocities and for different rotor pitches. There is a similar relationship for _C_ to rotor angular speeds at different freestreams, and we fit that as well, in order to apply _<sup>t</sup>_ torque and mach limit constraints. A stall constraint can be applied by enforcing a minimum . _C<sup>t</sup>_ The resulting model runs quickly, and returns the desired necessary for the model, *thrust*2*shaft* η along with relevant constraints. We assume energy stored in the rotors is negligible.
 
-#### <span id="page-234-0"></span>12.1.2.2 Aero Model
+#### 12.1.2.2 Aero Model
 
 Within the model, we simply need a function that accepts aerodynamic angles (alpha and beta) and non-dimensionalized body rates (omega hat, , and outputs aerodynamic force and )ωˆ moment coefficients. Force coefficients can either be in reference to the kite body frame axes (represented with , , ), or the aerodynamic frame (represented with , , ), _C<sup>x</sup> C<sup>y</sup> C<sup>z</sup> C<sup>D</sup> C<sup>Y</sup> C<sup>L</sup>_ while moment coefficients must be in the body frame (represented with , , ). Since we _C<sup>l</sup> C<sup>m</sup> C<sup>n</sup>_ don't specify flap deflections and instead just model the effect of flaps as optional constraints and penalties, an aero model can be as simple as a one line polynomial function, enabling easy evaluation of conceptual designs early in the process.
 
 Eventually, we desired additional fidelity and to accept the input that is used in the simulator, which is a lookup table generated from some other model, with rate terms linearized about some nominal operating point. To ensure smoothness, we create a piecewise polynomial curve fit of the lookup tables, and this fitted model forms our required function.
 
-#### <span id="page-234-1"></span>12.1.3 Known Shortcomings
+#### 12.1.3 Known Shortcomings
 
 -   Optimistic results.
     -   In addition to any performance benefits resulting from simplified models, the results assume perfect control and no turbulence.
